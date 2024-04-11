@@ -1,0 +1,19 @@
+{
+  "name": "@moeru-ai/characters",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "pnpm build:json",
+    "build:json": "tsx src/build-json.ts"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./dist/*.json": "./dist/*.json",
+    "./*.json": "./dist/*.json"
+  },
+  "files": ["dist"],
+  "devDependencies": {
+    "character-card-utils": "^2.0.3",
+    "defu": "^6.1.4"
+  }
+}

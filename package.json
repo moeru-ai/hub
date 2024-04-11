@@ -1,0 +1,10 @@
+{
+  "name": "@moeru-ai/hub",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@importantimport/tsconfig": "^0.0.1",
+    "@types/node": "^20.12.7",
+    "tsx": "^4.7.2"
+  }
+}

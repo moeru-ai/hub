@@ -1,0 +1,4 @@
+/* https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-into-the-theme-options-of-vitepress */
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
+}

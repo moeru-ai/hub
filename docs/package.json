@@ -1,0 +1,16 @@
+{
+  "name": "@moeru-ai/docs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "@moeru-ai/characters": "workspace:*",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^1.28.0",
+    "vitepress": "^1.1.0",
+    "vue": "^3.4.21"
+  }
+}

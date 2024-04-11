@@ -1,0 +1,7 @@
+{
+  "extends": "@importantimport/tsconfig",
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}
