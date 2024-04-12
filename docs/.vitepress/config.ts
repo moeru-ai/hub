@@ -4,6 +4,7 @@ import { sidebar } from './config/sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/hub',
   title: 'Moeru-AI Hub',
   description: 'A VitePress Site',
   lastUpdated: true,
