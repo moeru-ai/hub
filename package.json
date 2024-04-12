@@ -2,6 +2,11 @@
   "name": "@moeru-ai/hub",
   "type": "module",
   "private": true,
+  "scripts": {
+    "build": "pnpm build:packages && pnpm build:docs",
+    "build:docs": "pnpm -rF @moeru-ai/docs build",
+    "build:packages": "pnpm -rF ./packages/* build"
+  },
   "devDependencies": {
     "@importantimport/tsconfig": "^0.0.1",
     "@types/node": "^20.12.7",
