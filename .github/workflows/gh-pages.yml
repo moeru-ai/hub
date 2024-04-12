@@ -1,0 +1,16 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
+    with:
+      publish_dir: docs/.vitepress/dist
