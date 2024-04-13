@@ -3,10 +3,15 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "pnpm build:json",
-    "build:json": "tsx src/build-json.ts"
+    "build": "pnpm build:json && pnpm build:tsup",
+    "build:json": "tsx src/build-json.ts",
+    "build:tsup": "tsup"
   },
   "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./package.json": "./package.json",
     "./dist/*.json": "./dist/*.json",
     "./*.json": "./dist/*.json"
