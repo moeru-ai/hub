@@ -5,7 +5,7 @@
   const { params } = useData()
 </script>
 
-# <img :src="params.char.data.avatar" style="display: inline-block; vertical-align: middle; margin-right: 1rem" width="96" /> {{ $params.char.data.name }} <Badge type="info" style="vertical-align: text-top" :text="params.char.data.character_version" />
+# <img :src="params.char.data.avatar" style="display: inline-block; vertical-align: middle; margin-right: 1rem" width="96" /> {{params.char.data.name}} <Badge type="info" style="vertical-align: text-top" :text="params.char.data.character_version" />
 
 ## About
 
