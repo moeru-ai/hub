@@ -3,15 +3,24 @@ export const description = (...column: string[]) =>
 
 /**
  * Inspired by Seraphina
- * @param title 
- * @param contents 
+ * @param key 
+ * @param values 
  * @returns 
  */
 export const traits = (key: string, values: string[]) =>
-    `[{{char}}'s ${key} = "${values.join('", "')}"]`
+    `[{{char}}'s ${key} = ${values.join(', ')}]`
 
-export const chat = (character: 'user' | 'char', message: string) =>
-    `{{${character}}}: ${message}`
+/**
+ * Inspired by Kisna Kaalana
+ * @param key 
+ * @param values 
+ * @returns 
+ */
+export const trait = (key: string, values: string[]) =>
+    `${key}(${values.join(', ')})`
+
+export const chat = (character: 'USER' | 'CHAR', message: string) =>
+    `{{${character.toLowerCase()}}}: ${message}`
 
 export const START = '<START>' as const
 
