@@ -8,9 +8,9 @@ const characters = [
       // { text: 'Original', items: [] },
       {
         text: 'Visual Novel', items: [
-          // { text: 'Apeiria', link: '/characters/visual_novel/apeiria/' },
-          { text: 'Tsukuyomi', link: '/characters/visual_novel/tsukuyomi/' },
-          // { text: 'Murasame', link: '/characters/visual_novel/murasame/' },
+          // { text: 'Apeiria', link: '/characters/visual_novel/apeiria' },
+          { text: 'Tsukuyomi', link: '/characters/visual_novel/tsukuyomi' },
+          // { text: 'Murasame', link: '/characters/visual_novel/murasame' },
         ]
       }
     ]
