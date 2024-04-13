@@ -5,7 +5,15 @@ A simple hub. based on [VitePress](https://github.com/vuejs/vitepress) / [Nólë
 ## [Characters](/packages/characters/)
 
 ```ts
+// json
 import tsukuyomi from '@moeru-ai/characters/visual_novel/tsukuyomi/tsukuyomi.json' assert { type: 'json' }
+// object
+import { json } from '@moeru-ai/characters'
 
 console.log(tsukuyomi)
+console.log(json.visual_novel.tsukuyomi.tsukuyomi)
 ```
+
+## License
+
+TODO
