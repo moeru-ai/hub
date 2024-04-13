@@ -1,28 +1,23 @@
 import type { DefaultTheme as Theme } from 'vitepress'
 
-const characters = [
-  {
-    text: 'Characters',
-    collapsed: false,
-    items: [
-      // { text: 'Original', items: [] },
-      {
-        text: 'Visual Novel', items: [
-          // { text: 'Apeiria', link: '/characters/visual_novel/apeiria' },
-          { text: 'Tsukuyomi', link: '/characters/visual_novel/tsukuyomi' },
-          // { text: 'Murasame', link: '/characters/visual_novel/murasame' },
-        ]
-      }
-    ]
-  }
-] satisfies Theme.SidebarItem[]
+import { categories, json } from '@moeru-ai/characters'
 
-// const lorebooks = [] satisfies Theme.SidebarItem[]
-
-// const models = [] satisfies Theme.SidebarItem[]
+const defineSidebar = (active: 'characters') => [{
+  text: 'Characters',
+  collapsed: active !== 'characters',
+  items: Object.entries(json)
+    .map(([category, characters]) => ({
+      text: categories[category],
+      items: Object.entries(characters)
+        .map(([character, variants]) => ({
+          text: variants[character].data.name,
+          link: `/characters/${category}/${character}`
+        }))
+    }))
+}] satisfies Theme.SidebarItem[]
 
 export const sidebar = {
-  '/characters/': characters,
-  // '/lorebooks/': lorebooks,
-  // '/models/': models,
+  '/characters/': defineSidebar('characters'),
+  // '/lorebooks/': defineSidebar('lorebooks'),
+  // '/models/': defineSidebar('models'),
 } satisfies Theme.SidebarMulti

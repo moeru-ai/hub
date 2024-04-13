@@ -1,4 +1,4 @@
-import * as json from '@moeru-ai/characters'
+import { json } from '@moeru-ai/characters'
 
 export default {
     paths: () => Object.entries(json).flatMap(([category, characters]) =>
