@@ -11,6 +11,7 @@
     "@importantimport/tsconfig": "^0.0.1",
     "@types/node": "^20.12.7",
     "tsup": "^8.0.2",
-    "tsx": "^4.7.2"
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
   }
 }
