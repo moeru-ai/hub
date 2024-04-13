@@ -1,7 +1,5 @@
 import type { UserConfig } from 'vitepress'
 
-import { fileURLToPath } from 'node:url'
-
 import {
   GitChangelog,
   GitChangelogMarkdownSection
@@ -18,11 +16,11 @@ export const vite = {
   plugins: [
     GitChangelog({
       repoURL: () => 'https://github.com/moeru-ai/hub',
+      /** {@link https://github.com/nolebase/integrations/issues/158} */
       rewritePaths: {
-        // "docs/characters/": "packages/characters/src/",
-        'docs/': 'hub/',
-        // ".html": ".ts",
-        // ".md": ".ts",
+        // 'packages/characters/src/json/': 'hub/characters/',
+        // '.ts': '.md',
+        'docs/': 'hub/'
       },
     }),
     GitChangelogMarkdownSection(),
