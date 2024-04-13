@@ -6,7 +6,11 @@ import {
   NolebaseEnhancedReadabilitiesMenu, 
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
+import {
+  NolebaseGitChangelogPlugin
+} from '@nolebase/vitepress-plugin-git-changelog/client'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
+// import '@nolebase/vitepress-plugin-git-changelog/client/styles.css'
 import Layout from './Layout.vue'
 import './style.css'
 
@@ -19,6 +23,7 @@ export default {
     'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
   }),
   enhanceApp({ app, router, siteData }) {
+    app.use(NolebaseGitChangelogPlugin)
     // ...
   }
 } satisfies Theme
