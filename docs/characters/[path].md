@@ -9,17 +9,27 @@
 
 ## About
 
+<span style="white-space: pre-wrap">
+
 {{params.char.data.creator_notes}}
+
+</span>
 
 ## Description
 
-```json-vue
+<span style="white-space: pre-wrap">
+
 {{params.char.data.description}}
-```
+
+</span>
 
 ## First Message
 
+<span style="white-space: pre-wrap">
+
 {{params.char.data.first_mes}}
+
+</span>
 
 ## Raw JSON
 
@@ -27,7 +37,11 @@
 
 ::: details {{key}}.json
 
+<span style="white-space: pre-wrap">
+
 {{value.data.creator_notes}}
+
+</span>
 
 ```json-vue
 {{value}}
