@@ -35,6 +35,9 @@ importers:
       '@nolebase/vitepress-plugin-git-changelog':
         specifier: ^1.28.0
         version: 1.28.0(vitepress@1.1.0)(vue@3.4.21)
+      '@radix-ui/colors':
+        specifier: ^3.0.0
+        version: 3.0.0
       unocss:
         specifier: ^0.59.2
         version: 0.59.2(postcss@8.4.38)(vite@5.2.8)
@@ -1150,6 +1153,10 @@ packages:
 
   /@polka/url@1.0.0-next.25:
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+    dev: true
+
+  /@radix-ui/colors@3.0.0:
+    resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
     dev: true
 
   /@rive-app/canvas@2.14.1:

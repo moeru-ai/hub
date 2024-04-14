@@ -6,6 +6,7 @@ import { vite } from './config/vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  appearance: 'dark',
   base: '/hub',
   title: '@moeru-ai/hub',
   // description: 'A VitePress Site',
