@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { vite } from './config/vite'
 import { sidebar } from './config/sidebar'
+import { transformPageData } from './config/transform-page-data'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -25,5 +26,6 @@ export default defineConfig({
     },
     sidebar,
   },
+  transformPageData,
   vite,
 })
