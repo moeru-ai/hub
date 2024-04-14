@@ -5,10 +5,6 @@ import * as json from './json'
 import { stringifyCharacterCard } from './utils/card'
 
 try {
-  await fs.rm('./dist', { recursive: true, force: true })
-} catch {}
-
-try {
   await fs.mkdir('./dist')
 } catch {}
 

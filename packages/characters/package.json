@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "pnpm build:json && pnpm build:tsup",
+    "build": "pnpm build:tsup && pnpm build:json",
     "build:json": "tsx src/build-json.ts",
     "build:tsup": "tsup"
   },
