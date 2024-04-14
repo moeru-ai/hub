@@ -5,6 +5,6 @@ export const editLink = {
     pattern: ({ filePath }) => {
         if (filePath.startsWith('characters/'))
             return `https://github.com/moeru-ai/hub/edit/main/packages/characters/src/json/${filePath.slice(11, -3)}.ts`
-        else return `https://github.com/moeru-ai/hub/edit/main/${filePath}`
+        else return `https://github.com/moeru-ai/hub/edit/main/docs/${filePath}`
     }
 } satisfies Theme.EditLink
