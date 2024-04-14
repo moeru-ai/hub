@@ -27,6 +27,8 @@
 
 ::: details {{key}}.json
 
+{{value.data.creator_notes}}
+
 ```json-vue
 {{value}}
 ```
