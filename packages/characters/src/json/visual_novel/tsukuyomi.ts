@@ -61,7 +61,10 @@ so she decided to perfect the "love" part first.`,
   character_version: '0.1',
 })
 
-export const tsukuyomi_variant1 = overrideCharacterCard({
-  name: `${NAME} variant1`,
-  creator_notes: 'override test'
+export const tsukuyomi_moon = overrideCharacterCard({
+  creator_notes: description(
+    'Main heroine from "Kami-sama no You na Kimi e"',
+    'This is supposed to be Tsukuyomi at the end of her route,',
+    `but I haven't finished it yet.`
+  ),
 }, tsukuyomi)
