@@ -18,7 +18,6 @@ export default {
   extends: DefaultTheme,
   /** {@link https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-into-the-theme-options-of-vitepress} */
   Layout: () => h(Layout, null, {
-  // Layout: () => h(DefaultTheme.Layout, null, {
     'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
     'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
   }),

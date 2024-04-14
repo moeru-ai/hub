@@ -1,5 +1,3 @@
-@import url('styles/hero.css');
-@import url('styles/nolebase.css');
 @import url('@radix-ui/colors/lime.css');
 @import url('@radix-ui/colors/lime-dark.css');
 @import url('@radix-ui/colors/red.css');
@@ -32,4 +30,9 @@
   --vp-c-danger-2: var(--red-10);
   --vp-c-danger-3: var(--red-8);
   --vp-c-danger-soft: color(from var(--red-9) display-p3 r g b / 0.14);
+}
+
+/* https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-into-the-theme-options-of-vitepress */
+.VPSocialLinks.VPNavBarSocialLinks.social-links {
+  margin-right: 0;
 }
