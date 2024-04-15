@@ -2,7 +2,6 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 
 import * as json from './json'
-import { stringifyCharacterCard } from './utils/card'
 
 try {
   await fs.mkdir('./dist')
@@ -19,7 +18,7 @@ for (const [category, characters] of Object.entries(json)) {
     } catch {}
 
     for (const [variant, json] of Object.entries(variants)) {
-      await fs.writeFile(path.join('./dist', category, character, `${variant}.json`), stringifyCharacterCard(json))
+      await fs.writeFile(path.join('./dist', category, character, `${variant}.json`), JSON.stringify(json, null, 2))
     }
   }
 }

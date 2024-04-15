@@ -16,8 +16,11 @@
     "./dist/*.json": "./dist/*.json",
     "./*.json": "./dist/*.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
+    "@moeru-ai/character-card-helpers": "workspace:^",
     "character-card-utils": "^2.0.3",
     "defu": "^6.1.4"
   }

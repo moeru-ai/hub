@@ -55,6 +55,9 @@ importers:
 
   packages/characters:
     devDependencies:
+      '@moeru-ai/character-card-helpers':
+        specifier: workspace:^
+        version: link:../character-card-helpers
       character-card-utils:
         specifier: ^2.0.3
         version: 2.0.3
