@@ -33,11 +33,11 @@ importers:
         specifier: workspace:*
         version: link:../packages/characters
       '@nolebase/vitepress-plugin-enhanced-readabilities':
-        specifier: ^1.28.0
-        version: 1.28.0(vitepress@1.1.0)
+        specifier: 2.0.0-rc3
+        version: 2.0.0-rc3(vitepress@1.1.0)
       '@nolebase/vitepress-plugin-git-changelog':
-        specifier: ^1.28.0
-        version: 1.28.0(vitepress@1.1.0)(vue@3.4.21)
+        specifier: 2.0.0-rc3
+        version: 2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21)
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
@@ -1004,12 +1004,6 @@ packages:
     dev: true
     optional: true
 
-  /@iconify-json/octicon@1.1.53:
-    resolution: {integrity: sha512-QaVwZsO7v4F5J1oj3uhxLXYA4fCzrvWFlruyMXOhUDZtrKTc6Vb5nIO1b7A4NOwzlTW638XZzHW70PnE0V0F8g==}
-    dependencies:
-      '@iconify/types': 2.0.0
-    dev: true
-
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -1114,8 +1108,8 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@nolebase/ui@1.28.0(vitepress@1.1.0)(vue@3.4.21):
-    resolution: {integrity: sha512-H3d6lPYMBvAc9KzGQuOo+yf41EykJ21qswRo1OZ8lqMZZu8vLwutQq4qflxIp9GrWUojUQl036VnDp7SihENjg==}
+  /@nolebase/ui@2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21):
+    resolution: {integrity: sha512-qZL+5JFrrtTC0FttEFn8ssi8R/SAgDUqCXSUM3xUcHD7UZ9wJD+V7vmaEdpyn0WG2PlDgDJ99C+Ue2+awHvuzg==}
     peerDependencies:
       vitepress: ^1.0.0
       vue: ^3.2.0
@@ -1129,21 +1123,20 @@ packages:
       vue: 3.4.21(typescript@5.4.5)
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@1.28.0(vitepress@1.1.0):
-    resolution: {integrity: sha512-nDSobBB1pFacTTBuhh5Jf6vTpx9aBaslbU98eEr7unTNiDtil6V+TjwZIXRI5gCMbJADX4zruUUeID1p3pkL6A==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@2.0.0-rc3(vitepress@1.1.0):
+    resolution: {integrity: sha512-VdRB+E04CWqZwre7XWuDOglI47acqQy16FXvJ6sBfA+3MoRSB9C6rYW1PoUipOilDScDj+w/uVog8F91J+pSig==}
     peerDependencies:
       vitepress: ^1.0.0
     dependencies:
       vitepress: 1.1.0(@algolia/client-search@4.23.3)(@types/node@20.12.7)(postcss@8.4.38)(search-insights@2.13.0)(typescript@5.4.5)
     dev: true
 
-  /@nolebase/vitepress-plugin-git-changelog@1.28.0(vitepress@1.1.0)(vue@3.4.21):
-    resolution: {integrity: sha512-X9z2FsBzoZgrXTqgZ58mpQaseQM+4Dh6Rxk+M8ULZMnpzidoswwX90EN0eg+NrIjZkSTG9wc1tSumRhQvVTjbw==}
+  /@nolebase/vitepress-plugin-git-changelog@2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21):
+    resolution: {integrity: sha512-fXdnIXnyQ/srgF7NxwOTOWIjtDx5XA0DrFO2foJNexQEngxfbUqMUZJzeC6zxVsVqkc2mSiO1PYoUxh5db6pJA==}
     peerDependencies:
       vitepress: ^1.0.0
     dependencies:
-      '@iconify-json/octicon': 1.1.53
-      '@nolebase/ui': 1.28.0(vitepress@1.1.0)(vue@3.4.21)
+      '@nolebase/ui': 2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21)
       colorette: 2.0.20
       date-fns: 3.6.0
       gray-matter: 4.0.3
