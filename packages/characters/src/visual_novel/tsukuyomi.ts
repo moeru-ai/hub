@@ -10,11 +10,11 @@ export const tsukuyomi = defineCharacterCard({
   name,
   extensions: {
     avatar: new URL('https://www.cuffs.co.jp/products/kamikimi_ext/twitter_material/download_icon-tsukuyomi.png').href,
+    about: chats(
+      'Main heroine from "Kami-sama no You na Kimi e"',
+      'My first character card, for testing purposes only at this time'
+    )
   },
-  // creator_notes: description(
-  //   'Main heroine from "Kami-sama no You na Kimi e"',
-  //   'My first character card, for testing purposes only at this time'
-  // ),
   creator_notes: lists(
     /** {@link https://vndb.org/c85636} */
     list(`${name}'s appearance`, [
@@ -67,9 +67,11 @@ so she decided to perfect the "love" part first.`,
 })
 
 export const tsukuyomi_moon = overrideCharacterCard({
-  creator_notes: chats(
-    'Main heroine from "Kami-sama no You na Kimi e"',
-    'This is supposed to be Tsukuyomi at the end of her route,',
-    `but I haven't finished it yet.`
-  ),
+  extensions: {
+    about: chats(
+      'Main heroine from "Kami-sama no You na Kimi e"',
+      'This is supposed to be Tsukuyomi at the end of her route,',
+      `but I haven't finished it yet.`
+    )
+  },
 }, tsukuyomi)

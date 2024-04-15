@@ -11,7 +11,7 @@
 
 <span style="white-space: pre-wrap">
 
-{{params.char.data.creator_notes}}
+{{params.char.data.extensions.about}}
 
 </span>
 
@@ -39,7 +39,7 @@
 
 <span style="white-space: pre-wrap">
 
-{{value.data.creator_notes}}
+{{value.data.extensions.about}}
 
 </span>
 
