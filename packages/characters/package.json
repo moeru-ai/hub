@@ -21,7 +21,6 @@
   ],
   "devDependencies": {
     "@moeru-ai/character-card-helpers": "workspace:^",
-    "character-card-utils": "^2.0.3",
     "defu": "^6.1.4"
   }
 }
