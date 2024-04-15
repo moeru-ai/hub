@@ -1,0 +1,31 @@
+{
+  "name": "@moeru-ai/character-card-helpers",
+  "type": "module",
+  "scripts": {
+    "build": "tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./alichat": {
+      "types": "./dist/alichat.d.ts",
+      "default": "./dist/alichat.js"
+    },
+    "./alichat.js": {
+      "types": "./dist/alichat.d.ts",
+      "default": "./dist/alichat.js"
+    },
+    "./plist": {
+      "types": "./dist/plist.d.ts",
+      "default": "./dist/plist.js"
+    },
+    "./plist.js": {
+      "types": "./dist/plist.d.ts",
+      "default": "./dist/plist.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"]
+}

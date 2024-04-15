@@ -48,6 +48,8 @@ importers:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.4.5)
 
+  packages/character-card-helpers: {}
+
   packages/characters:
     devDependencies:
       character-card-utils:
