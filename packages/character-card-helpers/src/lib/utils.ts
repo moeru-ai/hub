@@ -20,17 +20,17 @@ const defaultData = {
   character_book: undefined,
 } satisfies CharacterCardData
 
-const defaultMerger: CharacterCardMerger = (override, defaults) => ({
+const defaultMerger: CharacterCardMerger = (overrides, defaults) => ({
   ...defaults,
-  ...override,
+  ...overrides,
 })
 
-export const defineCharacterCard = (data: Partial<CharacterCardData>, merge: CharacterCardMerger = defaultMerger): CharacterCard => ({
+export const defineCharacterCard = (data: Partial<CharacterCardData>, merger: CharacterCardMerger = defaultMerger): CharacterCard => ({
   spec: 'chara_card_v2',
   spec_version: '2.0',
-  data: merge(data, defaultData)
+  data: merger(data, defaultData)
 })
 
-export const overrideCharacterCard = (override: Partial<CharacterCardData>, defaults: CharacterCard, merge: CharacterCardMerger = defaultMerger): CharacterCard =>
-  defineCharacterCard(merge(override, defaults.data))
+export const overrideCharacterCard = (overrides: Partial<CharacterCardData>, defaults: CharacterCard, merger: CharacterCardMerger = defaultMerger): CharacterCard =>
+  defineCharacterCard(merger(overrides, defaults.data))
 
