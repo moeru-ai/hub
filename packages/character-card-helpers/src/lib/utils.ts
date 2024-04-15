@@ -9,15 +9,17 @@ const defaultData = {
   scenario: '',
   first_mes: '',
   mes_example: '',
-  extensions: {},
+
   creator_notes: '',
   system_prompt: '',
   post_history_instructions: '',
   alternate_greetings: [],
+  character_book: undefined,
+
   tags: [],
   creator: '',
   character_version: '',
-  character_book: undefined,
+  extensions: {},
 } satisfies CharacterCardData
 
 const defaultMerger: CharacterCardMerger = (overrides, defaults) => ({
