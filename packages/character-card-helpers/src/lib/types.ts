@@ -34,7 +34,8 @@ export interface CharacterCardData {
   system_prompt: string
   post_history_instructions: string
   alternate_greetings: string[]
-  character_book?: CharacterBook
+  /** `null | void` types are for compatibility with `defu` */
+  character_book?: CharacterBook | null | void
 
   // May 8th additions
   tags: string[]
