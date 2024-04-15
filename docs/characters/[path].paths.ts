@@ -5,7 +5,7 @@ export default {
         Object.entries(characters).map(([character, variants]) => ({
             params: {
                 path: `${category}/${character}`,
-                char: variants[character],
+                char: variants[character as keyof typeof variants],
                 variants,
             },
         })))
