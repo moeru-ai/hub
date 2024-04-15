@@ -5,12 +5,12 @@ import { h } from 'vue'
 import {
   NolebaseEnhancedReadabilitiesMenu, 
   NolebaseEnhancedReadabilitiesScreenMenu,
-} from '@nolebase/vitepress-plugin-enhanced-readabilities'
+} from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import {
   NolebaseGitChangelogPlugin
 } from '@nolebase/vitepress-plugin-git-changelog/client'
-import '@nolebase/vitepress-plugin-enhanced-readabilities/dist/style.css'
-// import '@nolebase/vitepress-plugin-git-changelog/client/styles.css'
+import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
+import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
 import Layout from './Layout.vue'
 import './style.css'
 
