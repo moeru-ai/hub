@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "@moeru-ai/characters": "workspace:*",
-    "@nolebase/vitepress-plugin-enhanced-readabilities": "2.0.0-rc3",
-    "@nolebase/vitepress-plugin-git-changelog": "2.0.0-rc3",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "2.0.0-rc4",
+    "@nolebase/vitepress-plugin-git-changelog": "2.0.0-rc4",
     "@radix-ui/colors": "^3.0.0",
     "unocss": "^0.59.2",
     "vitepress": "^1.1.0",

@@ -4,14 +4,18 @@ import {
   GitChangelog,
   GitChangelogMarkdownSection,
 } from '@nolebase/vitepress-plugin-git-changelog/vite'
-// import UnoCSS from 'unocss/vite'
+import UnoCSS from 'unocss/vite'
 
-// import unocssConfig from './unocss'
+import unocssConfig from './unocss'
 
 /** {@link https://nolebase-integrations.ayaka.io/pages/en/integrations/vitepress-plugin-enhanced-readabilities/#add-plugin-specific-options-into-configurations-of-vite} */
 export const vite = {
   optimizeDeps: {
     include: ['@nolebase/vitepress-plugin-enhanced-readabilities > @nolebase/ui > @rive-app/canvas'],
+    exclude: ['@nolebase/vitepress-plugin-enhanced-readabilities/client']
+  },
+  ssr: {
+    noExternal: ['@nolebase/vitepress-plugin-enhanced-readabilities']
   },
   plugins: [
     GitChangelog({
@@ -28,9 +32,6 @@ export const vite = {
       // }
     }),
     GitChangelogMarkdownSection(),
-    // UnoCSS(unocssConfig)
+    UnoCSS(unocssConfig)
   ],
-  ssr: {
-    noExternal: ['@nolebase/vitepress-plugin-enhanced-readabilities']
-  },
 } satisfies UserConfig['vite']

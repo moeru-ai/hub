@@ -9,9 +9,12 @@ import {
 import {
   NolebaseGitChangelogPlugin
 } from '@nolebase/vitepress-plugin-git-changelog/client'
+import Layout from './Layout.vue'
+
+import 'uno.css'
+
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
-import Layout from './Layout.vue'
 import './style.css'
 
 export default {

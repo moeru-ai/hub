@@ -33,11 +33,11 @@ importers:
         specifier: workspace:*
         version: link:../packages/characters
       '@nolebase/vitepress-plugin-enhanced-readabilities':
-        specifier: 2.0.0-rc3
-        version: 2.0.0-rc3(vitepress@1.1.0)
+        specifier: 2.0.0-rc4
+        version: 2.0.0-rc4(vitepress@1.1.0)
       '@nolebase/vitepress-plugin-git-changelog':
-        specifier: 2.0.0-rc3
-        version: 2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21)
+        specifier: 2.0.0-rc4
+        version: 2.0.0-rc4(vitepress@1.1.0)(vue@3.4.21)
       '@radix-ui/colors':
         specifier: ^3.0.0
         version: 3.0.0
@@ -1108,8 +1108,8 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@nolebase/ui@2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21):
-    resolution: {integrity: sha512-qZL+5JFrrtTC0FttEFn8ssi8R/SAgDUqCXSUM3xUcHD7UZ9wJD+V7vmaEdpyn0WG2PlDgDJ99C+Ue2+awHvuzg==}
+  /@nolebase/ui@2.0.0-rc4(vitepress@1.1.0)(vue@3.4.21):
+    resolution: {integrity: sha512-bPJph5VqImKb0i1se9OonYP9fIqohuL9mQUhFpnt1CVsmEXNGsoivcjdTNq2iEGfoIeyzkqK7laG3QjuRyDJMw==}
     peerDependencies:
       vitepress: ^1.0.0
       vue: ^3.2.0
@@ -1123,20 +1123,20 @@ packages:
       vue: 3.4.21(typescript@5.4.5)
     dev: true
 
-  /@nolebase/vitepress-plugin-enhanced-readabilities@2.0.0-rc3(vitepress@1.1.0):
-    resolution: {integrity: sha512-VdRB+E04CWqZwre7XWuDOglI47acqQy16FXvJ6sBfA+3MoRSB9C6rYW1PoUipOilDScDj+w/uVog8F91J+pSig==}
+  /@nolebase/vitepress-plugin-enhanced-readabilities@2.0.0-rc4(vitepress@1.1.0):
+    resolution: {integrity: sha512-vyLCjhqJSRnu0p2KY6smCvIFx3X8S1pt2/rNlUHsa0DPM/6SCgBU28GJ1ZsUKxr+kzSHz5PLmrEIjJFM/kUzzg==}
     peerDependencies:
       vitepress: ^1.0.0
     dependencies:
       vitepress: 1.1.0(@algolia/client-search@4.23.3)(@types/node@20.12.7)(postcss@8.4.38)(search-insights@2.13.0)(typescript@5.4.5)
     dev: true
 
-  /@nolebase/vitepress-plugin-git-changelog@2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21):
-    resolution: {integrity: sha512-fXdnIXnyQ/srgF7NxwOTOWIjtDx5XA0DrFO2foJNexQEngxfbUqMUZJzeC6zxVsVqkc2mSiO1PYoUxh5db6pJA==}
+  /@nolebase/vitepress-plugin-git-changelog@2.0.0-rc4(vitepress@1.1.0)(vue@3.4.21):
+    resolution: {integrity: sha512-4NhSVzKqDAAW9VME+lbrt8esEcwf7WS01hmfCo2pNeaLl6B/rhS6jCDpWnbWfjlU/sun8sTuCsxmJ7DroTM3IQ==}
     peerDependencies:
       vitepress: ^1.0.0
     dependencies:
-      '@nolebase/ui': 2.0.0-rc3(vitepress@1.1.0)(vue@3.4.21)
+      '@nolebase/ui': 2.0.0-rc4(vitepress@1.1.0)(vue@3.4.21)
       colorette: 2.0.20
       date-fns: 3.6.0
       gray-matter: 4.0.3
