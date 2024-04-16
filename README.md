@@ -2,7 +2,20 @@
 
 A simple hub. based on [VitePress](https://github.com/vuejs/vitepress) / [Nólëbase](https://github.com/nolebase/integrations).
 
-## [Characters](/packages/characters/)
+## Packages
+
+### [`@moeru-ai/character-card-helpers`](/packages/character-card-helpers/)
+
+```ts
+import { defineCharacterCard} from '@moeru-ai/character-card-helpers'
+
+export const myCharacter = defineCharacterCard({
+  name: 'Hello',
+  first_mes: 'World!',
+})
+```
+
+### [`@moeru-ai/characters`](/packages/characters/)
 
 ```ts
 // json
