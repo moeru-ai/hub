@@ -7,7 +7,7 @@ A simple hub. based on [VitePress](https://github.com/vuejs/vitepress) / [Nólë
 ### [`@moeru-ai/character-card-helpers`](/packages/character-card-helpers/)
 
 ```ts
-import { defineCharacterCard} from '@moeru-ai/character-card-helpers'
+import { defineCharacterCard } from '@moeru-ai/character-card-helpers'
 
 export const myCharacter = defineCharacterCard({
   name: 'Hello',
