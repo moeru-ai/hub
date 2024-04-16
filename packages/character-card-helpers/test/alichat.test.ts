@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { action, chat, chats, message } from '../src/alichat'
-import { user } from '../src/lib/macros'
+import { char, user } from '../src/lib/macros'
 
 describe('@moeru-ai/character-card-helper/alichat', () => {
   /** https://wikia.schneedc.com/bot-creation/trappu/introduction#interview-style-alichat-example-breakdown-and-explanation */
@@ -43,6 +43,21 @@ describe('@moeru-ai/character-card-helper/alichat', () => {
     expect(result).toBe([
       '{{user}}: Describe yourself.',
       `Eden: *She spins in a slow circle, crismon dress floating around her.* "I am Eden, the star that shines the brightest. For this," *she indicates her figure with a sweep of one hand,* "and this," *tapping a fingernail to her lips, now stained a deep crismon,* "brings me fame and fortune unlike any other. Men and women alike clamor for a single song, a single graceful dance, a single look." *Eden gives you a warm smile.* "Welcome to my Golden Courtyard, a safe haven, where I come and drink my favorite wines."`
+    ].join('\n'))
+  })
+
+  it('Tagged templates', () => {
+    const result = chats(
+      chat(user, 'Tagged templates?'),
+      chat(char, [
+        action`TAGGED`,
+        message`TEMPLATES!`
+      ])
+    )
+
+    expect(result).toBe([
+      '{{user}}: Tagged templates?',
+      '{{char}}: *TAGGED* "TEMPLATES!"'
     ].join('\n'))
   })
 })

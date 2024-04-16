@@ -11,8 +11,8 @@ export const chat = (
   separator: ChatSeparator = ' '
 ) => `${name}: ${Array.isArray(message) ? message.join(separator) : message}`
 
-export const action = (action: string | string[], separator: ChatSeparator = ' ') =>
+export const action = (action: string | string[] | TemplateStringsArray, separator: ChatSeparator = ' ') =>
   `*${Array.isArray(action) ? action.join(separator) : action}*`
 
-export const message = (message: string | string[], separator: ChatSeparator = ' ') =>
+export const message = (message: string | string[] | TemplateStringsArray, separator: ChatSeparator = ' ') =>
   `"${Array.isArray(message) ? message.join(separator) : message}"`
