@@ -18,14 +18,16 @@ export const tsukuyomi = defineCharacterCard({
   creator_notes: lists(
     /** {@link https://vndb.org/c85636} */
     list(`${name}'s appearance`, [
-      group('hair', ['white', 'long', 'side']),
+      group('hair', ['silver', 'long', 'side']),
       group('eyes', 'cyan'),
       group('teeth', 'white'),
       group('lips', 'pink'),
       group('skin', ['white', 'soft']),
-      group('top', 'crop-top'),
+      group('top', ['white', 'sleeveless', 'crop-top', 'cyan bow tie']),
+      group('wrist', ['white', 'cuffs']),
       group('skirt', ['dark green', 'short']),
-      group('socks', ['black', 'knee-high'])
+      group('socks', ['black', 'thigh-high']),
+      group('shoes', 'white')
     ])
   ),
   description: chats(
