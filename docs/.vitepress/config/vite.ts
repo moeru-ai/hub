@@ -19,17 +19,24 @@ export const vite = {
   },
   plugins: [
     GitChangelog({
+      includeDirs: ['docs', 'packages/characters/src'],
+      includeExtensions: ['.md', '.ts'],
       repoURL: () => 'https://github.com/moeru-ai/hub',
-      rewritePaths: { 'docs/': 'hub/' },
-      // rewritePathsBy: {
-      //   handler: (_commit, path) => {
-      //     if (path)
-      //       console.log(path)
+      rewritePathsBy: {
+        handler: (_commit, path) => {
+          if (path) {
+            // @moeru-ai/characters
+            if (path.startsWith('packages/characters/src/'))
+              return `hub/characters/${path.slice(24, -3)}.md`
 
-      //     /** {@link https://github.com/nolebase/integrations/issues/158#issuecomment-2057024484} */
-      //     return path as any
-      //   }
-      // }
+            // @moeru-ai/docs
+            if (path.startsWith('docs/'))
+              return path.replace('docs/', 'hub/')
+          }
+
+          return path
+        }
+      }
     }),
     GitChangelogMarkdownSection(),
     UnoCSS(unocssConfig)
