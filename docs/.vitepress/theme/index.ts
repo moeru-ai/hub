@@ -3,7 +3,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h } from 'vue'
 import {
-  NolebaseEnhancedReadabilitiesMenu, 
+  NolebaseEnhancedReadabilitiesMenu,
   NolebaseEnhancedReadabilitiesScreenMenu,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import {
@@ -24,8 +24,13 @@ export default {
     'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
     'nav-screen-content-after': () => h(NolebaseEnhancedReadabilitiesScreenMenu),
   }),
-  enhanceApp({ app, router, siteData }) {
-    app.use(NolebaseGitChangelogPlugin)
-    // ...
+  enhanceApp: ({ app }) => {
+    app.use(NolebaseGitChangelogPlugin, {
+      mapContributors: [{
+        name: '藍+85CD',
+        avatar: 'https://github.com/kwaa.png',
+        emailAliases: ['50108258+kwaa@users.noreply.github.com'],
+      }]
+    })
   }
 } satisfies Theme
