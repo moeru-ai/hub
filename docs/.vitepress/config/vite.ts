@@ -26,7 +26,7 @@ export const vite = {
         handler: (_commit, path) => {
           if (path) {
             // @moeru-ai/characters
-            if (path.startsWith('packages/characters/src/'))
+            if (path.startsWith('packages/characters/src/') && !path.includes('index.ts'))
               return `hub/characters/${path.slice(24, -3)}.md`
 
             // @moeru-ai/docs
