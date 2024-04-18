@@ -5,6 +5,7 @@ import { categories, json } from '@moeru-ai/characters'
 const defineSidebar = (active: 'characters') => [{
   text: 'Characters',
   collapsed: active !== 'characters',
+  link: '/characters/index.md',
   items: Object.entries(json)
     .map(([category, characters]) => ({
       text: categories[category],
