@@ -9,11 +9,11 @@
   },
   "devDependencies": {
     "@moeru-ai/characters": "workspace:*",
-    "@nolebase/vitepress-plugin-enhanced-readabilities": "2.0.0-rc4",
-    "@nolebase/vitepress-plugin-git-changelog": "2.0.0-rc4",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "2.0.0-rc5",
+    "@nolebase/vitepress-plugin-git-changelog": "2.0.0-rc5",
     "@radix-ui/colors": "^3.0.0",
-    "unocss": "^0.59.2",
+    "unocss": "^0.59.3",
     "vitepress": "^1.1.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.23"
   }
 }
