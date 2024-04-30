@@ -190,7 +190,7 @@ import {
 
 export const card1 = defineCharacterCard({ ...data })
 
-export const card2 = overrideCharacterCard(card1, { ...data })
+export const card2 = overrideCharacterCard({ ...data }, card1)
 
 export * as category1 from './category1'
 ```
@@ -204,7 +204,7 @@ import {
 
 export const card3 = defineCharacterCard({ ...data })
 
-export const card4 = overrideCharacterCard(card3, { ...data })
+export const card4 = overrideCharacterCard({ ...data }, card3)
 ```
 
 ```ts
@@ -217,6 +217,7 @@ await build(entry)
 ```
 
 ```jsonc
+// ./package.json
 {
   "scripts": {
     // using https://github.com/privatenumber/tsx
