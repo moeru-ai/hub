@@ -15,7 +15,15 @@
 
 </span>
 
-## Description
+## Creator Notes (PLists)
+
+<span style="white-space: pre-wrap">
+
+{{params.char.data.creator_notes}}
+
+</span>
+
+## Description (Ali:Chat)
 
 <span style="white-space: pre-wrap">
 
