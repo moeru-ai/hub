@@ -179,6 +179,52 @@ const creator_notes = lists(
 console.log(creator_notes)
 ```
 
+### Build
+
+```ts
+// ./src/index.ts
+import {
+  defineCharacterCard,
+  overrideCharacterCard,
+} from '@moeru-ai/character-card-helpers'
+
+export const card1 = defineCharacterCard({ ...data })
+
+export const card2 = overrideCharacterCard(card1, { ...data })
+
+export * as category1 from './category1'
+```
+
+```ts
+// ./src/category1.ts
+import {
+  defineCharacterCard,
+  overrideCharacterCard,
+} from '@moeru-ai/character-card-helpers'
+
+export const card3 = defineCharacterCard({ ...data })
+
+export const card4 = overrideCharacterCard(card3, { ...data })
+```
+
+```ts
+// ./build.ts
+import { build } from '@moeru-ai/character-card-helpers'
+
+import * as entry from './src'
+
+await build(entry)
+```
+
+```jsonc
+{
+  "scripts": {
+    // using https://github.com/privatenumber/tsx
+    "build": "tsx build.ts"
+  }
+}
+```
+
 ## License
 
 [MIT](../../LICENSE-MIT)

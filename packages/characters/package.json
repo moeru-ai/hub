@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "pnpm build:tsup && pnpm build:json",
-    "build:json": "tsx src/build.ts",
+    "build:json": "tsx build.ts",
     "build:tsup": "tsup"
   },
   "exports": {
