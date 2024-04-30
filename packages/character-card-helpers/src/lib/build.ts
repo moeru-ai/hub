@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import type { CharacterCard } from './lib/types'
+import type { CharacterCard } from './types'
 
 export interface BuildEntry {
   [key: string]: BuildEntry | CharacterCard
