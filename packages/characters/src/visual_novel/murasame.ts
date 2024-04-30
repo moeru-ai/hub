@@ -3,8 +3,8 @@ import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 
 import { defineCharacterCard, overrideCharacterCard } from '../utils'
 
-import mura_1 from '../../assets/visual_novel/murasame/mura_1.json' assert { type: 'json' }
-import mura_2 from '../../assets/visual_novel/murasame/mura_2.json' assert { type: 'json' }
+import mura_1 from '../../assets/visual_novel/murasame/mura_1.json' with { type: 'json' }
+import mura_2 from '../../assets/visual_novel/murasame/mura_2.json' with { type: 'json' }
 
 const name = 'Murasame' as const
 
