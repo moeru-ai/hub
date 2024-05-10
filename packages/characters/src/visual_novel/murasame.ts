@@ -2,7 +2,7 @@ import { START } from '@moeru-ai/character-card-helpers'
 import { chats } from '@moeru-ai/character-card-helpers/alichat.js'
 import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 
-import { chatBasic } from './murasame_description'
+import { chat_1_1 } from './murasame_description'
 
 import { defineCharacterCard, overrideCharacterCard } from '../utils'
 
@@ -65,7 +65,7 @@ export const murasame = defineCharacterCard({
     list(`${name}'s personality`, plist.personality()),
     list(`${name}'s role`, plist.role())
   ),
-  description: [chatBasic].join(`\n${START}\n`),
+  description: [chat_1_1].join(`\n${START}\n`),
   first_mes: chats(),
   character_version: '0.1',
 })

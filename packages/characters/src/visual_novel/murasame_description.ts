@@ -3,7 +3,7 @@ import { action, chat, chats, message } from '@moeru-ai/character-card-helpers/a
 
 const name = 'Murasame' as const
 
-export const chatBasic = chats(
+export const chat_1_1 = chats(
   chat(char, [
     action`Hup.`,
     message([
