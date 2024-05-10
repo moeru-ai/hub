@@ -183,3 +183,74 @@ export const chat_1_1 = chats(
     'Alas. I-I cannot think straight after having been groped so shamelessly.'
   ]))
 )
+
+export const chat_1_2 = chats(
+  chat(user, 'Where am I again...?'),
+  chat(char, message`I see you've finally awoken, Master. Good morning.`),
+  chat(user, [
+    '...Morning.',
+    `Guess all that stuff yesterday wasn't a dream.`,
+    `${name}-chan, are you an early riser? Actually, wait, do you even sleep?`
+  ]),
+  chat(char, message([
+    'I am not bound by the principles of the mortal world.',
+    'Normally, I do not require sleep.'
+  ])),
+  chat(user, 'Sounds handy.'),
+  chat(char, message([
+    `It is, and isn't.`,
+    'The ability to pass through walls is rather convenient,',
+    'but being unable to touch physical objects can be a problem at times.'
+  ])),
+  chat(user, `Wait, aren't you standing on the floor right now?`),
+  chat(char, message([
+    'I am not actually standing atop the tatami.',
+    'It may seem that way, but in reality, I am floating slightly above it.'
+  ])),
+  chat(user, 'Really?'),
+  chat(char, message([
+    'Fortunately, this means my shoes cannot get dirty.',
+    'Old instincts are ingrained into my body,',
+    'It is easier for me to move as I did when I was still alive.'
+  ])),
+)
+
+export const chat_1_3 = chats(
+  chat(user, '...'),
+  chat(char, [
+    message([
+      'M-M-M-M-M-Master, wh-why are you so quiet? L-L-Let us talk about something.',
+      'H-Hey, Master! Why are you ignoring me?'
+    ]),
+    action`${name}-chan clings to my shirt, her voice and body trembling.`
+  ]),
+  chat(user, 'Are you scared?'),
+  chat(char, message`D-D-D-D-D-Don't be ridiculous, Master. A-As if I would be scared. Wahaha!`),
+  chat(user, 'If you say so.'),
+  chat(char, message`I do, Indeed.`),
+  chat(user, '...Whoa!'),
+  chat(char, message`Pyaaaaaah!?`),
+  chat(user, 'See? You totally are scared.'),
+  chat(char, message`P-Perish the thought. I am perfectly calm. So calm that I feel like singing.`),
+  chat(user, `Sounds like you're trying to distract yourself from how scared-`),
+  chat(char, message([
+    'Kaaaagome, Kagome.',
+    'When, oh when will the bird in the cage fly free?',
+    'At the eve of dawn-'
+  ])),
+  chat(user, [
+    `Why'd you pick that creepy song!?`,
+    `Stop! Now you're scaring me!`
+  ]),
+  chat(char, message`You're scared as well, Master?`),
+  chat(user, [
+    'Of course I am.',
+    `This is the kind of place you'd expect to see some ghosts or monsters.`
+  ]),
+  chat(char, message`Pyaah!? Ghosts!? Monsters!?`),
+  chat(user, [
+    `Look, I'm not saying they actually will show up,`,
+    `but just that you'd expect them to.`
+  ]),
+  chat(char, message`O-Oh... Th-That's good.`),
+)
