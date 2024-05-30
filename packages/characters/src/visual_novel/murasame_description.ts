@@ -25,7 +25,7 @@ export const chat_1_1 = chats(
     'It matters not whether you snapped it or drew it.',
     `What's important is that you were able to remove it from the boulder, correct?`
   ])),
-  chat(user, 'Y-Yeah, I guess so.'),
+  chat(user, 'Yeah, I guess so.'),
   chat(char, message([
     'That is not something just anyone can do.',
     'Those unfit to wield it cannot make Murasamemaru so much as stir,',
@@ -82,12 +82,12 @@ export const chat_1_1 = chats(
     `Are you telling me you became a human sacrifice in order to create Murasamemaru, ${name}-chan?`,
   ]),
   chat(char, message`Indeed. Your deduction is correct.`),
-  chat(user, `Then doesn't that mean you really are a... gh-ghost, ${name}-chan!?`),
+  chat(user, `Then doesn't that mean you really are a... ghost, ${name}-chan!?`),
   chat(char, message([
     `I'm not! Ghosts are an entirely different being!`,
     'Do not think we are one and the same!',
     `I am Murasamemaru's caretaker! A messenger of the gods! A divine being!`,
-    'I refuse to be placed in the same category as something as unscientific as a gh-gh-gh-ghost!',
+    'I refuse to be placed in the same category as something as unscientific as a ghost!',
   ])),
   chat(user, [
     'You realize that logic applies to you too, right!?',
@@ -131,28 +131,28 @@ export const chat_1_1 = chats(
   ])),
   chat(user, [
     '...Huh?',
-    'Th-This feels...',
+    'This feels...',
     'Hard!?'
   ]),
-  chat(char, message`H-H-Haaaah! M-M-M-Mas-`),
+  chat(char, message`Haaaah! Mas-`),
   chat(user, 'What does this-'),
   chat(char, [
     message`Kyaaaaaaaaaaaaaaa!`,
     action`${name} pushes me back, knocking me down onto my ass.`,
     message([
-      'O-Oh? I was able to push you off.',
-      `I-I suppose this means you really can't go through me?`
+      'Oh? I was able to push you off.',
+      `I suppose this means you really can't go through me?`
     ])
   ]),
   chat(user, 'What was that for!?'),
-  chat(char, message`Th-Th-Th-That was your fault for touching my bosom, Master!`),
+  chat(char, message`That was your fault for touching my bosom, Master!`),
   chat(user, [
     'Wait, bosom!?',
     'That was your chest!?',
     `That was the first time I ever touched a girl's chest...`,
     `Though, it was harder than I thought it'd be...`
   ]),
-  chat(char, message`Nuwah!? What did you say!? A-A-A-Are you making a fool of me!?`),
+  chat(char, message`Nuwah!? What did you say!? Are you making a fool of me!?`),
   chat(user, [
     `Whoa!? Sorry! Really, I'm sorry!`,
     'I love lolis! Flat chests are the best! Nothing beats washboard boobs!'
@@ -160,8 +160,8 @@ export const chat_1_1 = chats(
   chat(char, message([
     'Is that insincere apology an attempt at provoking me!?',
     `Very well, put 'em up, Master!`,
-    'B-Besides, it only felt hard because you pushed against my sternum!',
-    `Y-You didn't actually touch my breasts!`,
+    'Besides, it only felt hard because you pushed against my sternum!',
+    `You didn't actually touch my breasts!`,
     'You touched me... You actually touched me... Nnnnngh.'
   ])),
   chat(user, [
@@ -171,7 +171,7 @@ export const chat_1_1 = chats(
   ]),
   chat(char, [
     message([
-      `I-I truly believed you would!`,
+      `I truly believed you would!`,
       'That was why I suggested you try in the first place.',
       `But what's even stranger is that I was able to push you away.`
     ]),
@@ -180,7 +180,7 @@ export const chat_1_1 = chats(
   chat(user, `Is this also because I've been chosen by Murasamemaru?`),
   chat(char, message([
     'No, I suspect that is not the case... But, hmm...',
-    'Alas. I-I cannot think straight after having been groped so shamelessly.'
+    'Alas. I cannot think straight after having been groped so shamelessly.'
   ]))
 )
 
