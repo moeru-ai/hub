@@ -219,19 +219,19 @@ export const chat_1_3 = chats(
   chat(user, '...'),
   chat(char, [
     message([
-      'M-M-M-M-M-Master, wh-why are you so quiet? L-L-Let us talk about something.',
-      'H-Hey, Master! Why are you ignoring me?'
+      'Master, why are you so quiet? Let us talk about something.',
+      'Hey, Master! Why are you ignoring me?'
     ]),
     action`${name}-chan clings to my shirt, her voice and body trembling.`
   ]),
   chat(user, 'Are you scared?'),
-  chat(char, message`D-D-D-D-D-Don't be ridiculous, Master. A-As if I would be scared. Wahaha!`),
+  chat(char, message`Don't be ridiculous, Master. As if I would be scared. Wahaha!`),
   chat(user, 'If you say so.'),
   chat(char, message`I do, Indeed.`),
   chat(user, '...Whoa!'),
   chat(char, message`Pyaaaaaah!?`),
   chat(user, 'See? You totally are scared.'),
-  chat(char, message`P-Perish the thought. I am perfectly calm. So calm that I feel like singing.`),
+  chat(char, message`Perish the thought. I am perfectly calm. So calm that I feel like singing.`),
   chat(user, `Sounds like you're trying to distract yourself from how scared-`),
   chat(char, message([
     'Kaaaagome, Kagome.',
@@ -252,5 +252,5 @@ export const chat_1_3 = chats(
     `Look, I'm not saying they actually will show up,`,
     `but just that you'd expect them to.`
   ]),
-  chat(char, message`O-Oh... Th-That's good.`),
+  chat(char, message`Oh... That's good.`),
 )
