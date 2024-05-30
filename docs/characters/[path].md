@@ -39,11 +39,11 @@
 
 </span>
 
-## Raw JSON
+## Download
 
 <template v-for="(value, key) in params.variants">
 
-::: details {{key}}.json
+::: details {{key}}
 
 <span style="white-space: pre-wrap">
 
@@ -54,6 +54,14 @@
 ```json-vue
 {{value}}
 ```
+
+<a :href="`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(value))}`" :download="`${key}.json`">Download JSON</a>
+
+<!-- <ClientOnly>
+  <a @click="downloadJSON(key, value, document)">Download JSON</a>
+</ClientOnly> -->
+
+<!-- [Download JSON](#) [Download PNG (TODO)](#) -->
 
 :::
 
