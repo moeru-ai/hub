@@ -55,13 +55,7 @@
 {{value}}
 ```
 
-<a :href="`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(value))}`" :download="`${key}.json`">Download JSON</a>
-
-<!-- <ClientOnly>
-  <a @click="downloadJSON(key, value, document)">Download JSON</a>
-</ClientOnly> -->
-
-<!-- [Download JSON](#) [Download PNG (TODO)](#) -->
+<a :href="`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(value))}`" :download="`${key}.json`">Download JSON</a>&nbsp;&nbsp;<a href="#">Download PNG (TODO)</a>
 
 :::
 
