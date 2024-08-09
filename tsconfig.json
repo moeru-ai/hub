@@ -1,6 +1,9 @@
 {
   "references": [
     {
+      "path": "./tsconfig.node.json"
+    },
+    {
       "path": "./packages/character-card-helpers/tsconfig.json"
     },
     {

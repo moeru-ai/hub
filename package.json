@@ -3,11 +3,16 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "corepack pnpm -r build"
+    "build": "corepack pnpm -r build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.25.0",
+    "@importantimport/eslint-config": "1.0.0-alpha.0",
     "@importantimport/tsconfig": "^0.1.1",
     "@types/node": "^22.1.0",
+    "eslint": "^9.8.0",
     "tsup": "^8.2.4",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4",
