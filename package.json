@@ -3,9 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "pnpm build:packages && pnpm build:docs",
-    "build:docs": "pnpm -rF @moeru-ai/docs build",
-    "build:packages": "pnpm -rF \"./packages/*\" build"
+    "build": "corepack pnpm -r build"
   },
   "devDependencies": {
     "@importantimport/tsconfig": "^0.1.1",
