@@ -7,11 +7,11 @@ export interface DefineReiOptions {
   name?: string
 }
 
-const defaults: DefineReiOptions = {
+const defaults: Required<DefineReiOptions> = {
   name: 'REI',
 }
 
-export const defineRei = (userOptions?: DefineReiOptions) => {
+export const defineRei = (userOptions?: Partial<DefineReiOptions>) => {
   const { name } = defu(userOptions, defaults)
 
   return defineCharacterCard({
