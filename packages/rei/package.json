@@ -1,0 +1,23 @@
+{
+  "name": "@moeru-ai/rei",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "tsup"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@moeru-ai/character-card-helpers": "workspace:^",
+    "defu": "^6.1.4"
+  }
+}

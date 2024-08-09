@@ -62,6 +62,15 @@ importers:
         specifier: ^6.1.4
         version: 6.1.4
 
+  packages/rei:
+    devDependencies:
+      '@moeru-ai/character-card-helpers':
+        specifier: workspace:^
+        version: link:../character-card-helpers
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
+
 packages:
 
   '@algolia/autocomplete-core@1.9.3':

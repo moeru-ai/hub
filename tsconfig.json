@@ -1,7 +1,14 @@
 {
-  "extends": "@importantimport/tsconfig/app.json",
-  "exclude": [
-    "node_modules",
-    "**/node_modules/*"
-  ]
+  "references": [
+    {
+      "path": "./packages/character-card-helpers/tsconfig.json"
+    },
+    {
+      "path": "./packages/characters/tsconfig.json"
+    },
+    {
+      "path": "./packages/rei/tsconfig.json"
+    }
+  ],
+  "files": []
 }
