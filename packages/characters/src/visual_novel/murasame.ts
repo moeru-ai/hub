@@ -6,7 +6,7 @@ import mura_1 from '../../assets/visual_novel/murasame/mura_1.json' with { type:
 import mura_2 from '../../assets/visual_novel/murasame/mura_2.json' with { type: 'json' }
 import { defineCharacterCard, overrideCharacterCard } from '../utils'
 import { chat_1_1, chat_1_2, chat_1_3 } from './murasame_description'
-import { scenario_2_3 } from './murasame_first_mes'
+import { scenario_2_3_modified } from './murasame_first_mes'
 
 const name = 'Murasame' as const
 
@@ -65,7 +65,7 @@ export const murasame = defineCharacterCard({
     about: about(),
     avatar: mura_1,
   },
-  first_mes: scenario_2_3,
+  first_mes: scenario_2_3_modified,
   name,
 })
 
