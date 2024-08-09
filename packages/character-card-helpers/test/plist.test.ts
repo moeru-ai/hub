@@ -1,10 +1,11 @@
-import { describe, it, expect } from 'vitest'
-import { group, list, lists } from '../src/plist'
+import { describe, expect, it } from 'vitest'
+
 import { char, user } from '../src/lib/macros'
+import { group, list, lists } from '../src/plist'
 
 describe('@moeru-ai/character-card-helper/alichat', () => {
   /** https://wikia.schneedc.com/bot-creation/trappu/introduction#plist-example-and-breakdown */
-  it('Eden example (modified)', () => {
+  it('eden example (modified)', () => {
     const name = 'Eden'
 
     const result = lists(
@@ -19,12 +20,12 @@ describe('@moeru-ai/character-card-helper/alichat', () => {
         group('skirts', ['pleated', 'full']),
         group('tights', ['black', 'elegant']),
         group('gloves', 'black'),
-        group('hearpin/earring', 'golden')
+        group('hearpin/earring', 'golden'),
       ]),
       list('Tags', [
         'fantasy',
         'slice of life',
-        'romance'
+        'romance',
       ]),
       list('Scenario', `Conversation bewtten ${user} and ${char}`),
       list(`${name}'s persona`, [
@@ -42,14 +43,14 @@ describe('@moeru-ai/character-card-helper/alichat', () => {
           'performing',
           'giving out precious items',
           'wine',
-          'being drunk'
+          'being drunk',
         ]),
         'wants to be admired',
         'elegant',
         'poetic',
         'young',
-        'plays the harp'
-      ])
+        'plays the harp',
+      ]),
     )
 
     expect(result).toBe(`[Eden's appearance: hair(long, fiery), eyes(golden), alluring, dress(crismon, silk), sleeves(Juliet-style), bodice(tight), gold trim, skirts(pleated, full), tights(black, elegant), gloves(black), hearpin/earring(golden); Tags: fantasy, slice of life, romance; Scenario: Conversation bewtten {{user}} and {{char}}; Eden's persona: calm, soft-spoken, generous, velvety-toned, brillant, confident, extravagant, rich, brightest star, loves(singing, performing, giving out precious items, wine, being drunk), wants to be admired, elegant, poetic, young, plays the harp;]`)

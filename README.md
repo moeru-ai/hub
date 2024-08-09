@@ -10,8 +10,8 @@ A simple hub. based on [VitePress](https://github.com/vuejs/vitepress) / [Nólë
 import { defineCharacterCard } from '@moeru-ai/character-card-helpers'
 
 export const myCharacter = defineCharacterCard({
-  name: 'Hello',
   first_mes: 'World!',
+  name: 'Hello',
 })
 ```
 
@@ -19,9 +19,9 @@ export const myCharacter = defineCharacterCard({
 
 ```ts
 // json
-import tsukuyomi from '@moeru-ai/characters/visual_novel/tsukuyomi/tsukuyomi.json' assert { type: 'json' }
 // object
 import { json } from '@moeru-ai/characters'
+import tsukuyomi from '@moeru-ai/characters/visual_novel/tsukuyomi/tsukuyomi.json' assert { type: 'json' }
 
 console.log(tsukuyomi)
 console.log(json.visual_novel.tsukuyomi.tsukuyomi)

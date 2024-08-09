@@ -8,14 +8,14 @@ export interface DefineReiOptions {
 }
 
 const defaults: DefineReiOptions = {
-  name: 'REI'
+  name: 'REI',
 }
 
 export const defineRei = (userOptions?: DefineReiOptions) => {
   const { name } = defu(userOptions, defaults)
 
   return defineCharacterCard({
+    character_version: pkg.version,
     name,
-    character_version: pkg.version
   })
 }

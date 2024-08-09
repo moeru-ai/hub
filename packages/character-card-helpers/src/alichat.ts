@@ -6,9 +6,9 @@ export const chats = (...chats: string[]) =>
   chats.join('\n')
 
 export const chat = (
-  name: typeof user | typeof char | ({} & string),
+  name: ({} & string) | typeof char | typeof user,
   message: string | string[],
-  separator: ChatSeparator = ' '
+  separator: ChatSeparator = ' ',
 ) => `${name}: ${Array.isArray(message) ? message.join(separator) : message}`
 
 export const action = (action: string | string[] | TemplateStringsArray, separator: ChatSeparator = ' ') =>

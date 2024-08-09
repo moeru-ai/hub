@@ -2,12 +2,11 @@ import {
   defineConfig,
   presetAttributify,
   // presetIcons,
-  presetUno
+  presetUno,
 } from 'unocss'
 
 /** {@link https://github.com/nolebase/integrations/blob/main/uno.config.ts} */
 export default defineConfig({
-  shortcuts: [],
   presets: [
     presetUno({
       dark: 'class',
@@ -25,4 +24,5 @@ export default defineConfig({
     //   warn: true,
     // }),
   ],
+  shortcuts: [],
 })

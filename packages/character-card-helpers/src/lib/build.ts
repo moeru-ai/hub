@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+
 import type { CharacterCard } from './types'
 
 export interface BuildEntry {
@@ -16,7 +17,8 @@ export const build = async (entry: BuildEntry, options: Partial<BuildOptions> = 
 
   try {
     await fs.mkdir(outDir)
-  } catch { }
+  }
+  catch { }
 
   for (const [key, value] of Object.entries(entry)) {
     if (value.spec === 'chara_card_v2') {

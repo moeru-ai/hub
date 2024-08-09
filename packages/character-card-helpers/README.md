@@ -21,8 +21,8 @@ import {
 } from '@moeru-ai/character-card-helpers'
 
 export const myCharacter = defineCharacterCard({
-  name: 'Hello',
   first_mes: ', World!',
+  name: 'Hello',
 })
 
 export const myCharacterWithoutFirstMes = overrideCharacterCard(
@@ -44,8 +44,8 @@ import {
 
 export const defineCharacterCard = (data: Partial<CharacterCardData>) =>
   originalDefineCharacterCard({
-    creator: 'moeru-ai',
     character_version: '0.1',
+    creator: 'moeru-ai',
     ...data,
   })
 
@@ -72,8 +72,8 @@ import { defu } from 'defu'
 export const defineCharacterCard = (data: Partial<CharacterCardData>) =>
   originalDefineCharacterCard(
     {
-      creator: 'moeru-ai',
       character_version: '0.1',
+      creator: 'moeru-ai',
       ...data,
     },
     defu
@@ -92,11 +92,11 @@ Ali:Chat helpers is exported at `@moeru-ai/character-card-helpers/alichat`.
 You can also import the `alichat` from the main entry:
 
 ```ts
+import { alichat } from '@moeru-ai/character-card-helpers'
+// equal
 import * as alichat from '@moeru-ai/character-card-helpers/alichat'
 // equal
 import * as alichat from '@moeru-ai/character-card-helpers/alichat.js'
-// equal
-import { alichat } from '@moeru-ai/character-card-helpers'
 ```
 
 Example:
@@ -109,10 +109,10 @@ import { action, chat, chats } from '@moeru-ai/character-card-helpers/alichat'
 const name = 'Pardofelis' as const
 
 const description = chats(
-  chat(user, 'Likes and dislikes?')
+  chat(user, 'Likes and dislikes?'),
   chat(name, [
     // string
-    action(`${name}' mismatched eyes lit up.`)
+    action(`${name}' mismatched eyes lit up.`),
     // array
     message([
       'Oh, things I like?',
@@ -128,8 +128,8 @@ always been good company for me since the old days.`),
     message([
       `Plus, nappin' in cozy spots.`,
       `Ahh, there's nothin' quite like a good snooze surrounded by treasures.`,
-      `As for things I don't like...`
-      `hmm... confrontations and fighting ain't my cup o' tea.`
+      `As for things I don't like...`,
+      `hmm... confrontations and fighting ain't my cup o' tea.`,
       `Tend to avoid 'em when I can—I’m no brawler.`
     ].join(' ')),
     // tagged templates
@@ -149,11 +149,11 @@ PList helpers is exported at `@moeru-ai/character-card-helpers/plist`.
 You can also import the `plist` from the main entry:
 
 ```ts
+import { plist } from '@moeru-ai/character-card-helpers'
+// equal
 import * as plist from '@moeru-ai/character-card-helpers/plist'
 // equal
 import * as plist from '@moeru-ai/character-card-helpers/plist.js'
-// equal
-import { plist } from '@moeru-ai/character-card-helpers'
 ```
 
 Example:
