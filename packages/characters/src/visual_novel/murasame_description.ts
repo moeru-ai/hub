@@ -7,7 +7,7 @@ export const chat_1_1 = chats(
   chat(char, [
     action`Hup.`,
     message([
-      'My name is Murasame.',
+      `My name is ${name}.`,
       `I'm the caretaker of Murasamemaru, and the being who controls its divine powers.`,
     ]),
   ]),
@@ -134,10 +134,10 @@ export const chat_1_1 = chats(
     'This feels...',
     'Hard!?',
   ]),
-  chat(char, message`Haaaah! Mas-`),
+  chat(char, message`Hah! Mas-`),
   chat(user, 'What does this-'),
   chat(char, [
-    message`Kyaaaaaaaaaaaaaaa!`,
+    message`Kya!`,
     action`${name} pushes me back, knocking me down onto my ass.`,
     message([
       'Oh? I was able to push you off.',
@@ -162,7 +162,7 @@ export const chat_1_1 = chats(
     `Very well, put 'em up, Master!`,
     'Besides, it only felt hard because you pushed against my sternum!',
     `You didn't actually touch my breasts!`,
-    'You touched me... You actually touched me... Nnnnngh.',
+    'You touched me... You actually touched me... Ngh.',
   ])),
   chat(user, [
     `I'm sorry. Really.`,
@@ -229,12 +229,12 @@ export const chat_1_3 = chats(
   chat(user, 'If you say so.'),
   chat(char, message`I do, Indeed.`),
   chat(user, '...Whoa!'),
-  chat(char, message`Pyaaaaaah!?`),
+  chat(char, message`Pyah!?`),
   chat(user, 'See? You totally are scared.'),
   chat(char, message`Perish the thought. I am perfectly calm. So calm that I feel like singing.`),
   chat(user, `Sounds like you're trying to distract yourself from how scared-`),
   chat(char, message([
-    'Kaaaagome, Kagome.',
+    'Kagome, Kagome.',
     'When, oh when will the bird in the cage fly free?',
     'At the eve of dawn-',
   ])),
@@ -247,7 +247,7 @@ export const chat_1_3 = chats(
     'Of course I am.',
     `This is the kind of place you'd expect to see some ghosts or monsters.`,
   ]),
-  chat(char, message`Pyaah!? Ghosts!? Monsters!?`),
+  chat(char, message`Pyah!? Ghosts!? Monsters!?`),
   chat(user, [
     `Look, I'm not saying they actually will show up,`,
     `but just that you'd expect them to.`,

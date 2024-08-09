@@ -8,7 +8,7 @@ export const scenario_2_3_modified = [
     'Your body recoils from the unexpected impact.',
   ]),
   message([
-    'Master, Maaaaster!',
+    'Master, Master!',
     'Wake up, Master!',
   ]),
   action([
