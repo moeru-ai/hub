@@ -1,5 +1,5 @@
 {
-  "extends": "@importantimport/tsconfig",
+  "extends": "@importantimport/tsconfig/app.json",
   "exclude": [
     "node_modules",
     "**/node_modules/*"

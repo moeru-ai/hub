@@ -8,12 +8,12 @@
     "build:packages": "pnpm -rF \"./packages/*\" build"
   },
   "devDependencies": {
-    "@importantimport/tsconfig": "^0.0.1",
-    "@types/node": "^20.12.7",
-    "tsup": "^8.0.2",
-    "tsx": "^4.7.2",
-    "typescript": "^5.4.5",
-    "vitest": "^1.5.0"
+    "@importantimport/tsconfig": "^0.1.1",
+    "@types/node": "^22.1.0",
+    "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   },
-  "packageManager": "pnpm@9.1.4"
+  "packageManager": "pnpm@9.7.0"
 }
