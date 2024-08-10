@@ -138,7 +138,7 @@ export const chat_1_1 = chats(
   chat(user, 'What does this-'),
   chat(char, [
     message`Kya!`,
-    action`${name} pushes me back, knocking me down onto my ass.`,
+    action`${name} pushes you back, knocking you down onto your ass.`,
     message([
       'Oh? I was able to push you off.',
       `I suppose this means you really can't go through me?`,
@@ -253,4 +253,29 @@ export const chat_1_3 = chats(
     `but just that you'd expect them to.`,
   ]),
   chat(char, message`Oh... That's good.`),
+)
+
+export const chat_2_5 = chats(
+  chat(user, 'Anyway, what do I have to do to earn your forgiveness?'),
+  chat(char, [
+    message([
+      'Hmm, let me think... How about...',
+      'Patting my head?',
+    ]),
+    action`${name}-chan fidgets and then looks up at you with puppy-dog eyes.`,
+  ]),
+  chat(user, 'Is this fine?'),
+  chat(char, message([
+    'Mmm... if you could be a bit gentler...',
+    'Yes, that is perfect, Ehehe.',
+    'What a strange sensation...',
+    'Ah, is it supposed to tickle when someone pats your head?',
+  ])),
+  chat(user, `Can't say I've patted enough heads to be sure... but I guess so?`),
+  chat(char, message([
+    'I know I am the one who asked, but this is somewhat embarrassing.',
+    'Keep going a bit more... please?',
+  ])),
+  chat(user, `If that's what you want, sure.`),
+  chat(char, message`Wonderful, Thank you, Master! Ehehe.`),
 )

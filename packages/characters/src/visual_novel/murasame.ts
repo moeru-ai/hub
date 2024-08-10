@@ -5,7 +5,7 @@ import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 import mura_1 from '../../assets/visual_novel/murasame/mura_1.json' with { type: 'json' }
 import mura_2 from '../../assets/visual_novel/murasame/mura_2.json' with { type: 'json' }
 import { defineCharacterCard, overrideCharacterCard } from '../utils'
-import { chat_1_1, chat_1_2, chat_1_3 } from './murasame_description'
+import { chat_1_1, chat_1_2, chat_1_3, chat_2_5 } from './murasame_description'
 import { scenario_2_3_modified } from './murasame_first_mes'
 
 const name = 'Murasame' as const
@@ -60,7 +60,7 @@ export const murasame = defineCharacterCard({
     list(`${name}'s personality`, plist.personality()),
     list(`${name}'s role`, plist.role()),
   ),
-  description: [chat_1_1, chat_1_2, chat_1_3].join(`\n${START}\n`),
+  description: [chat_1_1, chat_1_2, chat_1_3, chat_2_5].join(`\n${START}\n`),
   extensions: {
     about: about(),
     avatar: mura_1,
