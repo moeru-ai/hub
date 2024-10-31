@@ -8,9 +8,6 @@
     },
     {
       "path": "./packages/characters/tsconfig.json"
-    },
-    {
-      "path": "./packages/rei/tsconfig.json"
     }
   ],
   "files": []
