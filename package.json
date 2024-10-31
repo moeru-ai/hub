@@ -2,21 +2,21 @@
   "name": "@moeru-ai/hub",
   "type": "module",
   "private": true,
+  "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "corepack pnpm -r build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.25.0",
-    "@importantimport/eslint-config": "1.0.0-alpha.0",
+    "@antfu/eslint-config": "^3.8.0",
+    "@importantimport/eslint-config": "^1.0.0-alpha.2",
     "@importantimport/tsconfig": "^0.1.1",
-    "@types/node": "^22.1.0",
-    "eslint": "^9.8.0",
-    "tsup": "^8.2.4",
-    "tsx": "^4.17.0",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
-  },
-  "packageManager": "pnpm@9.7.0"
+    "@types/node": "^22.8.5",
+    "eslint": "^9.13.0",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
 }
