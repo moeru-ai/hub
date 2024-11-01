@@ -1,5 +1,6 @@
 export type { Asset, Assets } from './assets'
 export type { CharacterBook, CharacterBookEntry } from './character_book'
+export type { CharacterCardMCM } from './character_card_mcm'
 export type { CharacterCard } from './character_card_v3'
 export type { Data, DataV2, DataV3 } from './data'
 export type { Extensions } from './extensions'
