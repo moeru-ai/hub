@@ -5,5 +5,10 @@ import type { Data } from './data'
  */
 export interface CharacterCardMCM {
   name: Data['name']
+  /**
+   * @experimental
+   * TODO: remove this
+   */
+  rawDescription: string
   version: Data['character_version']
 }

@@ -7,6 +7,7 @@ export const defineCharacterCardMCM = (data: MCMData): CC => defineCharacterCard
   character_version: data.version,
   description: content(
     h(1, data.name),
+    data.rawDescription,
   ),
   name: data.name,
 })
