@@ -1,0 +1,20 @@
+{
+  "name": "@moeru-ai/characters-derivative",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"],
+  "devDependencies": {
+    "@moeru-ai/character-card-builder": "workspace:^"
+  }
+}
