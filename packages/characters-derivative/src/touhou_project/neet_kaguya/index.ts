@@ -13,6 +13,8 @@ import { traits } from './traits'
  * - {@link https://en.touhouwiki.net/wiki/Kaguya_Houraisan}
  */
 export const neet_kaguya = defineCharacterCardMCM({
+  alternate_greetings: [],
+  first_mes: '',
   name: 'Kaguya',
   rawDescription: md.content(
     ...about,
