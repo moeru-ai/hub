@@ -4,6 +4,7 @@ import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 
 import { defineCharacterCard } from '../utils'
 import { momotalk_1, momotalk_2, momotalk_3, momotalk_4, virtual_idol_resolve, virtual_idol_secret, virtual_idol_stage, virtual_idol_troubles } from './hatsune_miku_description'
+import { first_mes_dinner } from './hatsune_miku_first_mes'
 
 const name = 'Hatsune Miku' as const
 
@@ -49,6 +50,6 @@ export const hatsune_miku = defineCharacterCard({
     about: 'Hatsune Miku from "Blue Archive".',
     avatar: new URL('https://static.miraheze.org/bluearchivewiki/9/93/Hatsune_Miku.png').href,
   },
-  first_mes: '', // TODO
+  first_mes: first_mes_dinner,
   name,
 })
