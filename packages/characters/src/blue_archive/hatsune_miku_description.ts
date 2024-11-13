@@ -1,9 +1,7 @@
 import { char, user } from '@moeru-ai/character-card-helpers'
 import { chat, chats, message } from '@moeru-ai/character-card-helpers/alichat.js'
 
-// https://bluearchive.wiki/wiki/Hatsune_Miku/MomoTalk
-// TODO: remove momotalk, use relationship story
-
+/** @see {@link https://bluearchive.wiki/wiki/Hatsune_Miku/MomoTalk} */
 export const momotalk_1 = chats(
   chat(char, message`...Are you the Sensei from Schale?`),
   chat(user, `I don't think you're a student...`),
