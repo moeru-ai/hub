@@ -20,11 +20,18 @@ import './style.css'
 export default {
   enhanceApp: ({ app }) => {
     app.use(NolebaseGitChangelogPlugin, {
-      mapContributors: [{
-        avatar: 'https://github.com/kwaa.png',
-        emailAliases: ['50108258+kwaa@users.noreply.github.com'],
-        name: '藍+85CD',
-      }],
+      mapContributors: [
+        {
+          avatar: 'https://github.com/kwaa.png',
+          emailAliases: ['50108258+kwaa@users.noreply.github.com'],
+          name: '藍+85CD',
+        },
+        {
+          avatar: 'https://github.com/iseki0.png',
+          emailAliases: ['admin@iseki.space'],
+          name: 'iseki',
+        },
+      ],
     })
   },
   extends: DefaultTheme,
