@@ -44,5 +44,5 @@ Miku has many secret fans in Kivotos who are eagerly looking forward to the live
     avatar: new URL('https://static.miraheze.org/bluearchivewiki/9/93/Hatsune_Miku.png').href,
   },
   first_mes: '', // TODO
-  name: `${name} (WIP)`,
+  name,
 })
