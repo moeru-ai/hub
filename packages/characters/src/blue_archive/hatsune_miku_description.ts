@@ -119,7 +119,7 @@ export const virtual_idol_secret = chats(
   ])),
   chat(user, `I've never heard of anything like it either.`),
   chat(char, message([
-    `So you haven't... Haha. Just my luck.`,
+    `So you haven't... Ha-ha. Just my luck.`,
     `I'll be fine. I just didn't expect to get such a blunt answer right away.`,
     `Maybe I should be trying to figure this out on my own.`,
     `Thank you for taking time out of your busy schedule. I'll be going, then.`,
@@ -132,7 +132,7 @@ export const virtual_idol_secret = chats(
   ])),
   chat(user, `What kind of adult would I be if I didn't help?`),
   chat(char, message([
-    `Heehee. You're just as kind and wonderful as people said.`,
+    `Hee-hee. You're just as kind and wonderful as people said.`,
     `Thank you so much, Sensei. I'll take you up on that offer.`,
     `Let's both look for a solution. I'll do what I can, so could you find out if something similar has happened to anyone else before?`,
     `I'm counting on you, Sensei.`,
