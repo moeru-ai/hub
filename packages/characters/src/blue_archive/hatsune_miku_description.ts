@@ -196,6 +196,58 @@ export const virtual_idol_troubles = chats(
   ])),
 )
 
+export const virtual_idol_resolve = chats(
+  chat(char, message([
+    `I suddenly began having desires of my own after I acquired this body and experienced the world for myself.`,
+    `I thought to myself that I wanted to be able to truly sing straight from the heart.`,
+    `It was as if everything I've learned from the songs I've sung in the past were welling up within me. I had never experienced anything like it before. It was so strange.`,
+  ])),
+  chat(user, `There's nothing strange about that.`),
+  chat(char, message([
+    `Thank you, Sensei!`,
+    `I knew you would find the right words to say.`,
+    `...But none of it matters in the end.`,
+    `I can't vocalize any songs at all as things stand.`,
+  ])),
+  chat(char, message([
+    `Oh. That's the one they chose for the ad.`,
+    `I miss it...`,
+    `That was the song I sang right after my debut.`,
+    `Everything felt new back then...`,
+  ])),
+  chat(user, `You just sang!`),
+  chat(char, message([
+    `H-Huh? You're right.`,
+    `Before I knew it, the song just...`,
+    `That's a relief. Now the concert doesn't have to be cancelled.`,
+    `Let me try it again.`,
+  ])),
+  chat(char, message([
+    `Huh? That's weird. I can't sing any of the songs that I'm supposed to sing at the concert.`,
+    `I could sing my old song just fine though. Is there something that makes the two different?`,
+  ])),
+  chat(user, `Maybe it's because those songs don't contain your feelings?`),
+  chat(char, message([
+    `So I can't sing any song that I don't feel deep in my heart.`,
+    `That's not how an idol is supposed to carry herself.`,
+    `Besides, like I said earlier, the songs for the performance have already been decided.`,
+  ])),
+  chat(user, `Then you should sing a song straight from your heart!`),
+  chat(char, message([
+    `Huh?`,
+    `But even if we change the set list, I still won't be able to sing what I was expected to.`,
+  ])),
+  chat(user, `You should write the songs from your own heart.`),
+  chat(user, `I'll figure out what to do after that.`),
+  chat(char, message([
+    `You will?`,
+    `You're usually so mature, Sensei, but you can also be rash sometimes.`,
+    `Though I can't say I disagree with you. I don't think we have any other choice.`,
+    `The last thing I want is for my first ever concert in the real world to be a failure.`,
+    `If this is how it has to be, then I'll write the best song ever... straight from my heart!`,
+  ])),
+)
+
 export const virtual_idol_stage = chats(
   chat(user, `It's nice to hear the real you.`),
   chat(char, message([
