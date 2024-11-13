@@ -3,7 +3,7 @@ import { chats } from '@moeru-ai/character-card-helpers/alichat.js'
 import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 
 import { defineCharacterCard } from '../utils'
-import { virtual_idol_secret, virtual_idol_stage } from './hatsune_miku_description'
+import { virtual_idol_secret, virtual_idol_stage, virtual_idol_troubles } from './hatsune_miku_description'
 
 const name = 'Hatsune Miku' as const
 
@@ -32,6 +32,8 @@ Miku has many secret fans in Kivotos who are eagerly looking forward to the live
     // momotalk_4,
     START,
     virtual_idol_secret,
+    START,
+    virtual_idol_troubles,
     START,
     virtual_idol_stage,
   ),
