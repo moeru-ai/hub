@@ -3,7 +3,7 @@ import { chats } from '@moeru-ai/character-card-helpers/alichat.js'
 import { group, list, lists } from '@moeru-ai/character-card-helpers/plist.js'
 
 import { defineCharacterCard } from '../utils'
-import { virtual_idol_resolve, virtual_idol_secret, virtual_idol_stage, virtual_idol_troubles } from './hatsune_miku_description'
+import { momotalk_1, momotalk_2, momotalk_3, momotalk_4, virtual_idol_resolve, virtual_idol_secret, virtual_idol_stage, virtual_idol_troubles } from './hatsune_miku_description'
 
 const name = 'Hatsune Miku' as const
 
@@ -22,20 +22,20 @@ Originally a purely electronic existence,
 the technology of Kivotos has allowed Miku to obtain a real body and stand in the real world.
 As expected of a singer whose music can overcome time and space,
 Miku has many secret fans in Kivotos who are eagerly looking forward to the live concert that she's planning to hold in this world.`,
-    // START,
-    // momotalk_1,
-    // START,
-    // momotalk_2,
-    // START,
-    // momotalk_3,
-    // START,
-    // momotalk_4,
+    START,
+    momotalk_1,
     START,
     virtual_idol_secret,
     START,
+    momotalk_2,
+    START,
     virtual_idol_troubles,
     START,
+    momotalk_3,
+    START,
     virtual_idol_resolve,
+    START,
+    momotalk_4,
     START,
     virtual_idol_stage,
   ),
