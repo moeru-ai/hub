@@ -1,5 +1,5 @@
 {
-  "name": "mccm",
+  "name": "@moeru-ai/ccc",
   "type": "module",
   "scripts": {
     "build": "tsup",

@@ -60,6 +60,8 @@ importers:
         specifier: ^3.5.12
         version: 3.5.12(typescript@5.6.3)
 
+  packages/ccc: {}
+
   packages/character-card-builder: {}
 
   packages/character-card-helpers: {}
@@ -78,8 +80,6 @@ importers:
       '@moeru-ai/character-card-builder':
         specifier: workspace:^
         version: link:../character-card-builder
-
-  packages/mccm: {}
 
 packages:
 
