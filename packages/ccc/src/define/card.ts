@@ -26,7 +26,7 @@ interface CardMeta {
    * }
    * ```
    */
-  metadata: Record<string, boolean | number | string>
+  metadata?: Record<string, boolean | number | string>
 }
 
 interface CardAdditional {
@@ -37,7 +37,7 @@ interface CardAdditional {
    *
    * `greetings.slice(1)` - alternate_greetings
    */
-  greetings: string[]
+  greetings?: string[]
   /**
    * creator_notes
    * @see {@link https://github.com/kwaroran/character-card-spec-v3/blob/main/SPEC_V3.md#creator_notes}
