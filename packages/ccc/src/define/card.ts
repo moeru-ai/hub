@@ -39,6 +39,11 @@ interface CardAdditional {
    */
   greetings?: string[]
   /**
+   * Group Only Greetings.
+   * - group_only_greetings
+   */
+  greetingsGroupOnly?: string[]
+  /**
    * creator_notes
    * @see {@link https://github.com/kwaroran/character-card-spec-v3/blob/main/SPEC_V3.md#creator_notes}
    */
@@ -47,7 +52,7 @@ interface CardAdditional {
    * creator_notes_multilingual
    * @see {@link https://github.com/kwaroran/character-card-spec-v3/blob/main/SPEC_V3.md#creator_notes_multilingual}
    */
-  notes_multilingual?: Data['creator_notes_multilingual']
+  notesMultilingual?: Data['creator_notes_multilingual']
 }
 
 interface CardDescription {
