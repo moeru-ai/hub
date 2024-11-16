@@ -5,6 +5,7 @@
   "packageManager": "pnpm@9.12.3",
   "scripts": {
     "build": "corepack pnpm -r build",
+    "docs:dev": "corepack pnpm -rF @moeru-ai/docs dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
