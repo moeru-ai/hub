@@ -13,7 +13,8 @@ const prefixAndSuffix = (prefixAndSuffix: string) =>
  *
  * @example
  * ```ts
- * const foo = action`Hello, World` // `*Hello, World*`
+ * const world = 'World'
+ * const foo = action`Hello, ${world}!` // `*Hello, World!*`
  * const bar = action('What is love?') // '*What is love?*'
  * const baz = action(['lorem,', 'ipsum']) // '*lorem, ipsum*'
  * ```
@@ -25,7 +26,8 @@ export const action = prefixAndSuffix('*')
  *
  * @example
  * ```ts
- * const foo = message`Hello, World` // `"Hello, World"`
+ * const world = 'World'
+ * const foo = message`Hello, ${world}!` // `"Hello, World!"`
  * const bar = message('What is love?') // '"What is love?"'
  * const baz = message(['lorem,', 'ipsum']) // '"lorem, ipsum"'
  * ```
