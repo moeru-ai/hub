@@ -16,7 +16,7 @@ import {
  * Miku-chan from "Blue Archive".
  *
  * Ref:
- * - {@link https://vndb.org/c44770}
+ * - {@link https://bluearchive.wiki/wiki/Hatsune_Miku}
  */
 export const murasame = defineCard({
   description,
