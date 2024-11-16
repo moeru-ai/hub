@@ -31,6 +31,11 @@ interface CardMeta {
 
 interface CardAdditional {
   /**
+   * Extensions.
+   * - extensions
+   */
+  extensions?: Data['extensions']
+  /**
    * First message and alternate greetings.
    *
    * `greetings[0]` - first_mes

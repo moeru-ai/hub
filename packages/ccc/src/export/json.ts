@@ -9,7 +9,16 @@ export const exportToJSON = (data: Card): CharacterCardV3 => ({
     creator_notes: data.notes ?? '',
     creator_notes_multilingual: data.notesMultilingual,
     description: '', // TODO: add description // FIXME: important
-    extensions: {}, // TODO: add extensions
+    extensions: {
+      depth_prompt: {
+        depth: 4,
+        prompt: '',
+        role: 'system',
+      },
+      fav: false,
+      talkativeness: 0.5,
+      ...data.extensions,
+    },
     first_mes: data.greetings?.[0] ?? '',
     group_only_greetings: data.greetingsGroupOnly ?? [],
     mes_example: '', // TODO: add mes_example
