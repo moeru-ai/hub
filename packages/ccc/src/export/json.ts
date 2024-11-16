@@ -8,7 +8,7 @@ export const exportToJSON = (data: Card): CharacterCardV3 => ({
     creator: data.creator ?? '',
     creator_notes: data.notes ?? '',
     creator_notes_multilingual: data.notesMultilingual,
-    description: '', // TODO: add description // FIXME: important
+    description: data.description ?? '', // TODO: improve description // FIXME: important
     extensions: {
       depth_prompt: {
         depth: 4,

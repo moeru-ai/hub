@@ -67,6 +67,11 @@ interface CardAdditional {
 }
 
 interface CardDescription {
+  /**
+   * @experimental
+   * TODO: FIXME: remove this
+   */
+  description?: string
 }
 
 /**
