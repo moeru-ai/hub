@@ -62,8 +62,6 @@ importers:
 
   packages/ccc: {}
 
-  packages/character-card-builder: {}
-
   packages/character-card-helpers: {}
 
   packages/characters:
