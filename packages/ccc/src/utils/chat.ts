@@ -1,12 +1,14 @@
-const prefixAndSuffix = (prefixAndSuffix: string) =>
-  (str: string | string[] | TemplateStringsArray, ...substitutions: unknown[]) =>
-    `${prefixAndSuffix}${
+import type { Message } from '../define/types/mes_example'
+
+const prefixAndSuffix = <T extends string = string>(prefix: string, suffix: string = prefix) =>
+  (str: string | string[] | TemplateStringsArray, ...substitutions: unknown[]): T =>
+    `${prefix}${
       substitutions
         ? String.raw(str as TemplateStringsArray, substitutions)
         : Array.isArray(str)
           ? str.join(' ')
           : str
-    }${prefixAndSuffix}`
+    }${suffix}` as T
 
 /**
  * Generate action string.
@@ -34,4 +36,29 @@ export const action = prefixAndSuffix('*')
  */
 export const message = prefixAndSuffix('"')
 
-export { action as act, message as msg }
+/**
+ * Generate message example.
+ * @param content message content
+ * @returns message example
+ * @example
+ * ```ts
+ * const bar = char('hello') // '{{char}}: hello'
+ * ```
+ */
+export const char = prefixAndSuffix<Message>('{{char}}: ', '')
+
+/**
+ * Generate message example.
+ * @param content message content
+ * @returns message example
+ * @example
+ * ```ts
+ * const foo = user('hi') // '{{user}}: hi'
+ * ```
+ */
+export const user = prefixAndSuffix<Message>('{{user}}: ', '')
+
+export {
+  action as act,
+  message as msg,
+}

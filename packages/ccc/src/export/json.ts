@@ -21,7 +21,11 @@ export const exportToJSON = (data: Card): CharacterCardV3 => ({
     },
     first_mes: data.greetings?.[0] ?? '',
     group_only_greetings: data.greetingsGroupOnly ?? [],
-    mes_example: '', // TODO: add mes_example
+    mes_example: data.messageExample
+      ? `<START>${data.messageExample
+        .map(arr => arr.join('\n'))
+        .join('\n<START>\n')}`
+      : '',
     name: data.name,
     nickname: data.nickname,
     personality: '', // TODO: add personality
