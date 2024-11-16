@@ -79,6 +79,12 @@ importers:
         specifier: workspace:^
         version: link:../ccc
 
+  packages/characters-existing:
+    devDependencies:
+      '@moeru-ai/ccc':
+        specifier: workspace:^
+        version: link:../ccc
+
 packages:
 
   '@algolia/autocomplete-core@1.9.3':

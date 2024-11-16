@@ -4,13 +4,16 @@
       "path": "./tsconfig.node.json"
     },
     {
-      "path": "./packages/character-card-builder/tsconfig.json"
-    },
-    {
       "path": "./packages/character-card-helpers/tsconfig.json"
     },
     {
       "path": "./packages/characters/tsconfig.json"
+    },
+    {
+      "path": "./packages/character-derivative/tsconfig.json"
+    },
+    {
+      "path": "./packages/character-existing/tsconfig.json"
     }
   ],
   "files": []
