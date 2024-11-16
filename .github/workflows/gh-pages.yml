@@ -13,4 +13,4 @@ jobs:
   deploy:
     uses: importantimport/.github/.github/workflows/pnpm-gh-pages.yml@main
     with:
-      publish_dir: docs/.vitepress/dist
+      publish_dir: docs-old/.vitepress/dist

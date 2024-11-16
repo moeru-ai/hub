@@ -27,8 +27,8 @@ export const vite = {
               return `hub/characters/${path.slice(24, -3)}.md`
 
             // @moeru-ai/docs
-            if (path.startsWith('docs/'))
-              return path.replace('docs/', 'hub/')
+            if (path.startsWith('docs-old/'))
+              return path.replace('docs-old/', 'hub/')
           }
 
           return path
