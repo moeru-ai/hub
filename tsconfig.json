@@ -10,10 +10,10 @@
       "path": "./packages/characters/tsconfig.json"
     },
     {
-      "path": "./packages/character-derivative/tsconfig.json"
+      "path": "./packages/characters-derivative/tsconfig.json"
     },
     {
-      "path": "./packages/character-existing/tsconfig.json"
+      "path": "./packages/characters-existing/tsconfig.json"
     }
   ],
   "files": []
