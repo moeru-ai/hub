@@ -1,9 +1,7 @@
-import type { Extensions } from './extensions'
-
 export interface CharacterBook {
   description?: string
   entries: CharacterBookEntry[]
-  extensions: Extensions
+  extensions: CharacterBookExtensions
   name?: string
   recursive_scanning?: boolean
   scan_depth?: number
@@ -18,7 +16,7 @@ export interface CharacterBookEntry {
   constant?: boolean
   content: string
   enabled: boolean
-  extensions: Extensions
+  extensions: CharacterBookEntryExtensions
 
   // FIELDS WITH NO CURRENT EQUIVALENT IN SILLY
   /** not used in prompt engineering */
@@ -39,3 +37,7 @@ export interface CharacterBookEntry {
   /** if `true`, require a key from both `keys` and `secondary_keys` to trigger the entry */
   selective?: boolean
 }
+
+export interface CharacterBookExtensions extends Record<string, unknown> {}
+
+export interface CharacterBookEntryExtensions extends Record<string, unknown> {}
