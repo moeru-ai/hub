@@ -13,8 +13,10 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
-    "@moeru-ai/character-card-builder": "workspace:^"
+    "@moeru-ai/ccc": "workspace:^"
   }
 }

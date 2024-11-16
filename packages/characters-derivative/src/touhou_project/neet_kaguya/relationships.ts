@@ -1,4 +1,4 @@
-import { md } from '@moeru-ai/character-card-builder'
+import { md } from '@moeru-ai/ccc'
 
 export const relationships = [
   md.h(2, 'Relationships'),

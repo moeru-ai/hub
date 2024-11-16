@@ -77,9 +77,9 @@ importers:
 
   packages/characters-derivative:
     devDependencies:
-      '@moeru-ai/character-card-builder':
+      '@moeru-ai/ccc':
         specifier: workspace:^
-        version: link:../character-card-builder
+        version: link:../ccc
 
 packages:
 
