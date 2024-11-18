@@ -24,3 +24,6 @@ dist-ssr
 # Vitepress
 docs-old/.vitepress/cache
 docs-old/.vitepress/dist
+
+# Astro generated types
+.astro
