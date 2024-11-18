@@ -1,8 +1,8 @@
 ---
-import * as existing from '@moeru-ai/characters-existing'
+import * as derivative from '@moeru-ai/characters-derivative'
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
 
-export const getStaticPaths = () => Object.entries(existing)
+export const getStaticPaths = () => Object.entries(derivative)
 .flatMap(([parody, characters]) => Object.entries(characters)
 .flatMap(([character, json]) => ({
     params: { parody, character },
