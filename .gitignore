@@ -24,20 +24,3 @@ dist-ssr
 # Vitepress
 docs-old/.vitepress/cache
 docs-old/.vitepress/dist
-
-# docs:generated content
-.contentlayer
-.content-collections
-.source
-
-# docs:test & build
-/coverage
-docs/.next/
-/out/
-/build
-*.tsbuildinfo
-
-# docs:others
-.env*.local
-.vercel
-next-env.d.ts
