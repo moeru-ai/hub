@@ -54,6 +54,9 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
     devDependencies:
+      '@moeru-ai/characters-existing':
+        specifier: workspace:^
+        version: link:../packages/characters-existing
       starlight-theme-catppuccin:
         specifier: ^1.0.3
         version: 1.0.3(@astrojs/starlight@0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3)))(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3))
@@ -96,13 +99,13 @@ importers:
         version: 6.1.4
 
   packages/characters-derivative:
-    devDependencies:
+    dependencies:
       '@moeru-ai/ccc':
         specifier: workspace:^
         version: link:../ccc
 
   packages/characters-existing:
-    devDependencies:
+    dependencies:
       '@moeru-ai/ccc':
         specifier: workspace:^
         version: link:../ccc

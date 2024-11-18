@@ -16,7 +16,7 @@
   "files": [
     "dist"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@moeru-ai/ccc": "workspace:^"
   }
 }
