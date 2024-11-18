@@ -21,18 +21,20 @@ export default defineConfig({
           light: 'latte-teal',
         }),
       ],
+
       sidebar: [
         {
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: 'Example Guide', slug: 'guides/example' },
+            { label: 'Introduction', slug: 'characters' },
+            // { label: 'Murasame', slug: 'characters/existing/visual_novel/murasame' },
           ],
-          label: 'Guides',
+          label: 'Characters',
         },
-        {
-          autogenerate: { directory: 'reference' },
-          label: 'Reference',
-        },
+        // {
+        //   autogenerate: { directory: 'reference' },
+        //   label: 'Reference',
+        // },
       ],
       social: {
         github: 'https://github.com/moeru-ai/hub',
