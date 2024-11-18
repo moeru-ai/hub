@@ -1,6 +1,7 @@
 import starlight from '@astrojs/starlight'
 // @ts-check
 import { defineConfig } from 'astro/config'
+import sidebarTopicsDropdown from 'starlight-sidebar-topics-dropdown'
 import catppuccin from 'starlight-theme-catppuccin'
 
 import { generateSidebar } from './src/utils/sidebar'
@@ -18,12 +19,13 @@ export default defineConfig({
         src: './public/moeru-ai.png',
       },
       plugins: [
+        sidebarTopicsDropdown(generateSidebar()),
         catppuccin({
           dark: 'macchiato-green',
           light: 'latte-teal',
         }),
       ],
-      sidebar: generateSidebar(),
+      // sidebar: generateSidebar(),
       social: {
         github: 'https://github.com/moeru-ai/hub',
       },

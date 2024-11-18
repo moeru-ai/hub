@@ -60,6 +60,9 @@ importers:
       '@moeru-ai/characters-existing':
         specifier: workspace:^
         version: link:../packages/characters-existing
+      starlight-sidebar-topics-dropdown:
+        specifier: ^0.2.1
+        version: 0.2.1(@astrojs/starlight@0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3)))
       starlight-theme-catppuccin:
         specifier: ^1.0.3
         version: 1.0.3(@astrojs/starlight@0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3)))(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3))
@@ -4123,6 +4126,12 @@ packages:
 
   stackback@0.0.2:
     resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
+
+  starlight-sidebar-topics-dropdown@0.2.1:
+    resolution: {integrity: sha512-xhbcIMEKzfEltVg7AQgLhqwjQxBTeb2/w6XrT3QXXCmeO3dfTXD82lrd7wGepE0gQhJFGwlpu35UbiiczyjDsQ==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.28'
 
   starlight-theme-catppuccin@1.0.3:
     resolution: {integrity: sha512-QnFut3qqm5o2YmeN5okAFxlH+9b0SirMpQJOdCFeafTzoaIkgySH1Q1oFnVVk+qL4jKxQXqX+muJ8fTL0k+FmA==}
@@ -9688,6 +9697,10 @@ snapshots:
   stable-hash@0.0.4: {}
 
   stackback@0.0.2: {}
+
+  starlight-sidebar-topics-dropdown@0.2.1(@astrojs/starlight@0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3))):
+    dependencies:
+      '@astrojs/starlight': 0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3))
 
   starlight-theme-catppuccin@1.0.3(@astrojs/starlight@0.29.0(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3)))(astro@4.16.13(@types/node@22.8.5)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3)):
     dependencies:

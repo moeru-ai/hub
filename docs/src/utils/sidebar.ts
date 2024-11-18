@@ -1,19 +1,20 @@
-import type starlight from '@astrojs/starlight'
+import type { StarlightSidebarTopicsDropdownUserConfig } from 'starlight-sidebar-topics-dropdown'
 
 import * as derivative from '@moeru-ai/characters-derivative'
 import * as existing from '@moeru-ai/characters-existing'
 
 const toPascalCase = (str: string) => str.split('_').map(str => str.at(0)?.toUpperCase() + str.slice(1)).join(' ')
 
-export const generateSidebar = (): Parameters<typeof starlight>[0]['sidebar'] => [
+export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
   {
-    collapsed: false,
+    icon: 'open-book',
+    // collapsed: false,
     items: [
       { label: 'Introduction', slug: 'characters' },
       {
-        collapsed: false,
+        // collapsed: true,
         items: Object.entries(existing).map(([parody, characters]) => ({
-          collapsed: true,
+        //   collapsed: false,
           items: Object.entries(characters).map(([character, json]) => ({
             label: json.name,
             link: `characters/existing/${parody}/${character}`,
@@ -23,9 +24,9 @@ export const generateSidebar = (): Parameters<typeof starlight>[0]['sidebar'] =>
         label: 'Existing',
       },
       {
-        collapsed: false,
+        // collapsed: true,
         items: Object.entries(derivative).map(([parody, characters]) => ({
-          collapsed: true,
+        //   collapsed: false,
           items: Object.entries(characters).map(([character, json]) => ({
             label: json.name,
             link: `characters/derivative/${parody}/${character}`,
@@ -36,5 +37,6 @@ export const generateSidebar = (): Parameters<typeof starlight>[0]['sidebar'] =>
       },
     ],
     label: 'Characters',
+    link: 'characters',
   },
 ]

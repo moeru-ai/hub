@@ -19,6 +19,7 @@
   "devDependencies": {
     "@moeru-ai/characters-derivative": "workspace:^",
     "@moeru-ai/characters-existing": "workspace:^",
+    "starlight-sidebar-topics-dropdown": "^0.2.1",
     "starlight-theme-catppuccin": "^1.0.3"
   }
 }
