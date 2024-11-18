@@ -1,6 +1,7 @@
 import starlight from '@astrojs/starlight'
 // @ts-check
 import { defineConfig } from 'astro/config'
+import catppuccin from 'starlight-theme-catppuccin'
 
 // https://astro.build/config
 export default defineConfig({
@@ -8,7 +9,18 @@ export default defineConfig({
   base: '/hub/',
   integrations: [
     starlight({
-      favicon: 'https://github.com/moeru-ai.png',
+      favicon: '/moeru-ai.png',
+      logo: {
+        alt: '@moeru-ai/hub',
+        replacesTitle: true,
+        src: './public/moeru-ai.png',
+      },
+      plugins: [
+        catppuccin({
+          dark: 'macchiato-green',
+          light: 'latte-teal',
+        }),
+      ],
       sidebar: [
         {
           items: [
@@ -23,9 +35,9 @@ export default defineConfig({
         },
       ],
       social: {
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/moeru-ai/hub',
       },
-      title: 'My Docs',
+      title: '@moeru-ai/hub',
     }),
   ],
 })

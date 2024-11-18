@@ -10,10 +10,13 @@
     "start": "astro dev"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.29.0",
     "astro": "^4.16.10",
     "sharp": "^0.32.5",
-    "@astrojs/check": "^0.9.4",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "starlight-theme-catppuccin": "^1.0.3"
   }
 }
