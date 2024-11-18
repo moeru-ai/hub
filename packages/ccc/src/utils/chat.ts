@@ -3,7 +3,7 @@ import type { Message } from '../define/types/mes_example'
 const prefixAndSuffix = <T extends string = string>(prefix: string, suffix: string = prefix) =>
   (str: string | string[] | TemplateStringsArray, ...substitutions: unknown[]): T =>
     `${prefix}${
-      substitutions
+      substitutions.length > 0
         ? String.raw(str as TemplateStringsArray, substitutions)
         : Array.isArray(str)
           ? str.join(' ')
