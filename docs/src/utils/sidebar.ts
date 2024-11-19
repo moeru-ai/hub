@@ -10,28 +10,30 @@ export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
     icon: 'open-book',
     // collapsed: false,
     items: [
-      { label: 'Introduction', slug: 'characters' },
+      'characters',
+      'characters/contributing',
+      // { label: 'Introduction', slug: 'characters' },
       {
         // collapsed: true,
-        items: Object.entries(existing).map(([parody, characters]) => ({
+        items: Object.entries(existing).map(([category, characters]) => ({
         //   collapsed: false,
           items: Object.entries(characters).map(([character, json]) => ({
             label: json.name,
-            link: `characters/existing/${parody}/${character}`,
+            link: `characters/existing/${category}/${character}`,
           })),
-          label: toPascalCase(parody),
+          label: toPascalCase(category),
         })),
         label: 'Existing',
       },
       {
         // collapsed: true,
-        items: Object.entries(derivative).map(([parody, characters]) => ({
+        items: Object.entries(derivative).map(([category, characters]) => ({
         //   collapsed: false,
           items: Object.entries(characters).map(([character, json]) => ({
             label: json.name,
-            link: `characters/derivative/${parody}/${character}`,
+            link: `characters/derivative/${category}/${character}`,
           })),
-          label: toPascalCase(parody),
+          label: toPascalCase(category),
         })),
         label: 'Derivative',
       },
