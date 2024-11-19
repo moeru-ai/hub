@@ -1,7 +1,7 @@
 ---
 import { type Card, exportToJSON } from '@moeru-ai/ccc'
 import { Markdown } from '@astropub/md'
-import { Code, Steps } from '@astrojs/starlight/components'
+import { Code, Tabs, TabItem } from '@astrojs/starlight/components'
 
 interface Props {
   character: string
@@ -15,41 +15,17 @@ const card = exportToJSON(json)
 
 <Markdown.Inline of={`${json.notes ? `> ${json.notes}\n>\n` : ''}> <a href="data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}" download="${character}.json">Download JSON</a>`} />
 
-<!-- {json.description && <Markdown of={json.description} />} -->
-
 <hr />
 
-<details>
-  <summary>Definitions</summary>
-  <Steps>
-    <ol>
-      {json.description && <li>
-        <span>Description</span>
-        <p>
-          <Markdown of={json.description} />
-        </p>
-      </li>}
-      {json.messageExample && <li>
-        <span>Example message</span>
-        <p>
-          <Markdown of={card.data.mes_example.split('\n').join('\n\n')} />
-        </p>
-      </li>}
-      {card.data.first_mes && <li>
-        <span>First message</span>
-        <p>
-          <Markdown of={card.data.first_mes} />
-        </p>
-      </li>}
-      {card.data.alternate_greetings.length > 0 && <li>
-        <span>Alternate greetings</span>
-        <p>
-          <Markdown of={card.data.alternate_greetings.join('\n\n---\n\n')} />
-        </p>
-      </li>}
-    </ol>
-  </Steps>
-</details>
+<Tabs>
+  {json.description && <TabItem label="Description"><Markdown of={json.description} /></TabItem>}
+  {card.data.first_mes && <TabItem label="First Message"><Markdown of={card.data.first_mes} /></TabItem>}
+  {card.data.alternate_greetings.length > 0 && <TabItem label="Alternate Greetings"><Markdown of={card.data.alternate_greetings.join('\n\n---\n\n')} /></TabItem>}
+  {json.messageExample && <TabItem label="Example Messages"><Markdown of={card.data.mes_example.split('\n').join('\n\n')} /></TabItem>}
+  {/* TODO: personality, character_book, system_prompt */}
+</Tabs>
+
+<hr />
 
 <details>
   <summary>Raw JSON</summary>

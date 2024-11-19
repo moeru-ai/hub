@@ -1,4 +1,5 @@
 import starlight from '@astrojs/starlight'
+import markdown from '@astropub/md'
 // @ts-check
 import { defineConfig } from 'astro/config'
 import sidebarTopicsDropdown from 'starlight-sidebar-topics-dropdown'
@@ -11,6 +12,7 @@ export default defineConfig({
   // TODO: remove this
   base: '/hub/',
   integrations: [
+    markdown(),
     starlight({
       favicon: '/moeru-ai.png',
       logo: {
