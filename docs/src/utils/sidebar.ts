@@ -39,4 +39,19 @@ export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
     label: 'Characters',
     link: 'characters',
   },
+  {
+    icon: 'document',
+    // id: 'packages',
+    items: [
+      {
+        items: [{
+          label: 'Readme',
+          slug: 'packages/ccc',
+        }],
+        label: 'CCC',
+      },
+    ],
+    label: 'Packages',
+    link: 'packages',
+  },
 ]
