@@ -1,6 +1,7 @@
 ---
 import * as existing from '@moeru-ai/characters-existing'
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import Chara from '../../../../components/chara.astro'
 
 export const getStaticPaths = () => Object.entries(existing)
 .flatMap(([parody, characters]) => Object.entries(characters)
@@ -9,10 +10,14 @@ export const getStaticPaths = () => Object.entries(existing)
     props: { json }
 })))
 
-// const { parody, character } = Astro.params
+const { parody, character } = Astro.params
 const { json } = Astro.props
 ---
 
-<StarlightPage frontmatter={{ title: json.name }}>
-  lorem ipsum
+<StarlightPage frontmatter={{
+  title: json.name,
+  description: json.notes,
+  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-existing/src/${parody}/${character}/index.ts`
+}}>
+  <Chara {json} />
 </StarlightPage>

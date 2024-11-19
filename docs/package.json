@@ -17,6 +17,7 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@moeru-ai/ccc": "workspace:^",
     "@moeru-ai/characters-derivative": "workspace:^",
     "@moeru-ai/characters-existing": "workspace:^",
     "starlight-sidebar-topics-dropdown": "^0.2.1",

@@ -1,0 +1,11 @@
+---
+import type { Card } from '@moeru-ai/ccc'
+
+interface Props {
+  json: Card
+}
+
+const { json } = Astro.props
+---
+
+{json.notes}

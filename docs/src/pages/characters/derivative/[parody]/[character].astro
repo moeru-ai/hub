@@ -1,6 +1,7 @@
 ---
 import * as derivative from '@moeru-ai/characters-derivative'
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import Chara from '../../../../components/chara.astro'
 
 export const getStaticPaths = () => Object.entries(derivative)
 .flatMap(([parody, characters]) => Object.entries(characters)
@@ -9,10 +10,14 @@ export const getStaticPaths = () => Object.entries(derivative)
     props: { json }
 })))
 
-// const { parody, character } = Astro.params
+const { parody, character } = Astro.params
 const { json } = Astro.props
 ---
 
-<StarlightPage frontmatter={{ title: json.name }}>
-  lorem ipsum
+<StarlightPage frontmatter={{
+  title: json.name,
+  description: json.notes,
+  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-derivative/src/${parody}/${character}/index.ts`
+}}>
+  <Chara {json} />
 </StarlightPage>
