@@ -18,7 +18,7 @@ import {
  * Ref:
  * - {@link https://bluearchive.wiki/wiki/Hatsune_Miku}
  */
-export const murasame = defineCard({
+export const hatsune_miku = defineCard({
   description,
   messageExample: [
     momotalk_1,
