@@ -19,5 +19,5 @@ const { json } = Astro.props
   description: json.notes,
   editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-derivative/src/${parody}/${character}/index.ts`
 }}>
-  <Chara {json} />
+  <Chara {character} {json} />
 </StarlightPage>

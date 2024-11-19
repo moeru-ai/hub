@@ -17,6 +17,7 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@astropub/md": "^1.0.0",
     "@moeru-ai/ccc": "workspace:^",
     "@moeru-ai/characters-derivative": "workspace:^",
     "@moeru-ai/characters-existing": "workspace:^",
