@@ -32,4 +32,5 @@ export default defineConfig({
       title: '@moeru-ai/hub',
     }),
   ],
+  markdown: { smartypants: false },
 })
