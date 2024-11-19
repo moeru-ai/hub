@@ -27,6 +27,12 @@ const card = exportToJSON(json)
   <summary>Definitions</summary>
   <Steps>
     <ol>
+      {json.description && <li>
+        <span>Description</span>
+        <p>
+          <Markdown of={json.description} />
+        </p>
+      </li>}
       {json.messageExample && <li>
         <span>Example message</span>
         <p>
@@ -50,6 +56,6 @@ const card = exportToJSON(json)
 </details>
 
 <details>
-  <summary>Raw JSON (length: {JSON.stringify(card).length})</summary>
-  <Code code={JSON.stringify(card, null, 2)} lang="json" />
+  <summary>Raw JSON</summary>
+  <Code code={JSON.stringify(card, null, 2)} lang="json" title={`length: ${JSON.stringify(card).length}`} />
 </details>
