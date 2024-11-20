@@ -1,7 +1,7 @@
 import { md } from '@moeru-ai/ccc'
 
 export const about = [
-  md.h(2, 'About'),
+  md.h(3, 'About'),
   /* eslint-disable perfectionist/sort-objects */
   Object.entries({
     Name: 'Kaguya Houraisan (蓬莱山 輝夜, Hōraisan Kaguya)',

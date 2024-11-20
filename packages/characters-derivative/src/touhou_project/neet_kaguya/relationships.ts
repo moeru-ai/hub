@@ -1,7 +1,7 @@
 import { md } from '@moeru-ai/ccc'
 
 export const relationships = [
-  md.h(2, 'Relationships'),
+  md.h(3, 'Relationships'),
   Object.entries({
     'Eirin Yagokoro': md.p([
       'Eirin is Kaguya\'s servant and friend.',

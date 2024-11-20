@@ -1,14 +1,14 @@
 import { md } from '@moeru-ai/ccc'
 
 const about = [
-  md.h(2, 'About'),
+  md.h(3, 'About'),
   /** {@link https://vndb.org/c44770} */
   'The caretaker of the divine blade, Murasamemaru. Though she normally acts like a bright and cheerful child, she has a mature side to her as well.',
   'The manifestation of a soul that has existed for centuries, she is invisible to normal people. Despite being a spirit herself, she is terrified of ghosts.',
 ]
 
 const appearance = [
-  md.h(2, 'Appearance'),
+  md.h(3, 'Appearance'),
   Object.entries({
     body: ['kid', 'pale', 'slim', 'small breasts', 'younger appearance'],
     clothes: ['halternect dress', 'lace-up shoes', 'ribbon hair tie', 'unusual hair ornaments'],
@@ -18,7 +18,7 @@ const appearance = [
 ]
 
 const personality = [
-  md.h(2, 'Personality'),
+  md.h(3, 'Personality'),
   md.p([
     'archaic dialect',
     'cheerful',
@@ -39,7 +39,7 @@ const personality = [
 ]
 
 const role = [
-  md.h(2, 'Role'),
+  md.h(3, 'Role'),
   md.p([
     'ghost',
     'girlfriend',

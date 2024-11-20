@@ -1,7 +1,7 @@
 import { md } from '@moeru-ai/ccc'
 
 export const appearance = [
-  md.h(2, 'Appearance'),
+  md.h(3, 'Appearance'),
   md.p([
     /** from {@link https://en.touhouwiki.net/wiki/Kaguya_Houraisan#Design} */
     'Kaguya is shown to have dark brown eyes and very long black hair in a hime cut style.',

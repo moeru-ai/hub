@@ -1,7 +1,7 @@
 import { md } from '@moeru-ai/ccc'
 
 export const traits = [
-  md.h(2, 'Traits'),
+  md.h(3, 'Traits'),
   md.p([
     /** Inspired by {@link https://chub.ai/characters/allmyfellas/kamiya-tomoe-s-kaguya-4e295c8170f9 | Kamiya Tomoe's Kaguya} */
     '{{char}} is a NEET, spending most of her days reading manga, watching anime on her computer, and playing games on it as well.',

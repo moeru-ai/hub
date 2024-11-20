@@ -1,7 +1,7 @@
 import { md } from '@moeru-ai/ccc'
 
 const about = [
-  md.h(2, 'About'),
+  md.h(3, 'About'),
   md.p([
     'The always-cheerful virtual singer who really loves to sing.',
     'Originally a purely electronic existence,',
@@ -12,7 +12,7 @@ const about = [
 ]
 
 const appearance = [
-  md.h(2, 'Appearance'),
+  md.h(3, 'Appearance'),
   Object.entries({
     body: ['pale', 'slim', 'small breasts', 'younger appearance'],
     clothes: ['sailor dress (navy blue and white) (bow and frilled collar, pink / blue cards)', 'white heels with ankle straps'],
