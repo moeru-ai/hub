@@ -1,26 +1,30 @@
 ---
-import * as existing from '@moeru-ai/characters-existing'
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import * as existing from '@moeru-ai/characters-existing'
+
 import Chara from '../../../../components/chara.astro'
 
 export const getStaticPaths = () => Object.entries(existing)
 .flatMap(([category, characters]) => Object.entries(characters)
 .flatMap(([character, json]) => ({
     params: { category, character },
-    props: { json }
+    props: { json },
 })))
 
 const { category, character } = Astro.params
 const { json } = Astro.props
 ---
 
-<StarlightPage frontmatter={{
-  title: json.name,
+<StarlightPage
+  frontmatter={{
   description: json.notes,
-  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-existing/src/${category}/${character}/index.ts`
-}} headings={[
+  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-existing/src/${category}/${character}/index.ts`,
+  title: json.name,
+}}
+  headings={[
   { depth: 2, slug: 'definitions', text: 'Definitions' },
-  { depth: 2, slug: 'raw', text: 'Raw' }
-]}>
+  { depth: 2, slug: 'raw', text: 'Raw' },
+]}
+>
   <Chara {character} {json} />
 </StarlightPage>

@@ -1,26 +1,30 @@
 ---
-import * as derivative from '@moeru-ai/characters-derivative'
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import * as derivative from '@moeru-ai/characters-derivative'
+
 import Chara from '../../../../components/chara.astro'
 
 export const getStaticPaths = () => Object.entries(derivative)
 .flatMap(([category, characters]) => Object.entries(characters)
 .flatMap(([character, json]) => ({
     params: { category, character },
-    props: { json }
+    props: { json },
 })))
 
 const { category, character } = Astro.params
 const { json } = Astro.props
 ---
 
-<StarlightPage frontmatter={{
-  title: json.name,
+<StarlightPage
+  frontmatter={{
   description: json.notes,
   editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-derivative/src/${category}/${character}/index.ts`,
-}} headings={[
+  title: json.name,
+}}
+  headings={[
   { depth: 2, slug: 'definitions', text: 'Definitions' },
-  { depth: 2, slug: 'raw', text: 'Raw' }
-]}>
+  { depth: 2, slug: 'raw', text: 'Raw' },
+]}
+>
   <Chara {character} {json} />
 </StarlightPage>
