@@ -79,7 +79,7 @@ export const virtual_idol_secret = [
     `...but I didn't have a choice. I couldn't risk anyone else knowing about this.`,
   ])),
   user('Wait a minute...'),
-  char('Do you recognize me?'),
+  char(message`Do you recognize me?`),
   user('Nope. Never seen you before in my life.'),
   char(message([
     `You haven't...?`,
