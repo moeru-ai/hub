@@ -1,6 +1,8 @@
 ---
 import type { Card } from '@moeru-ai/ccc'
 
+import { Markdown } from '@astropub/md'
+
 interface Props {
   json: Card
 }
@@ -15,7 +17,9 @@ const { json } = Astro.props
 
   return (
     <div class={`chat ${isChar ? 'chat-start' : 'chat-end'}`}>
-      <div class={`chat-bubble ${!isChar && 'chat-bubble-accent'}`}>{message}</div>
+      <div class={`chat-bubble ${!isChar && 'chat-bubble-accent'}`}>
+        <Markdown.Inline of={message} />
+      </div>
     </div>
   )
 }))
