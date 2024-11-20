@@ -15,6 +15,9 @@ export default defineConfig({
   integrations: [
     markdown(),
     starlight({
+      components: {
+        PageTitle: './src/components/starlight/PageTitle.astro',
+      },
       favicon: '/moeru-ai.png',
       logo: {
         alt: '@moeru-ai/hub',

@@ -17,14 +17,16 @@ const { json } = Astro.props
 
 <StarlightPage
   frontmatter={{
-  description: json.notes,
-  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-existing/src/${category}/${character}/index.ts`,
-  title: json.name,
-}}
+    chara_version: json.version,
+    description: json.notes,
+    editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-existing/src/${category}/${character}/index.ts`,
+    title: json.name,
+    type: 'character',
+  }}
   headings={[
-  { depth: 2, slug: 'definitions', text: 'Definitions' },
-  { depth: 2, slug: 'raw', text: 'Raw' },
-]}
+    { depth: 2, slug: 'definitions', text: 'Definitions' },
+    { depth: 2, slug: 'raw', text: 'Raw' },
+  ]}
 >
   <Chara {character} {json} />
 </StarlightPage>

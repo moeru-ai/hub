@@ -1,0 +1,34 @@
+---
+import type { Props } from '@astrojs/starlight/props'
+
+import { Badge } from '@astrojs/starlight/components'
+// import { Icon } from '@astrojs/starlight/components'
+import Default from '@astrojs/starlight/components/PageTitle.astro'
+
+// import Version from '../Version.astro'
+
+const { data } = Astro.props.entry;
+---
+
+{
+  data.type === 'character'
+  ? (
+    <div class="wrapper">
+      <Default {...Astro.props}>
+        <slot />
+      </Default>
+      <div class="integration-metadata">
+        <Badge
+          text={`v${data.chara_version}`}
+          variant={data.chara_version?.startsWith('0.0') ? 'caution' : data.chara_version?.startsWith('0') ? 'tip' : 'success'}
+        />
+      </div>
+    </div>
+  )
+  : (
+    <Default {...Astro.props}>
+      <slot />
+    </Default>
+  )
+}
+
