@@ -3,6 +3,9 @@ import { type Card, exportToJSON } from '@moeru-ai/ccc'
 import { Markdown } from '@astropub/md'
 import { Code, Tabs, TabItem } from '@astrojs/starlight/components'
 
+import FirstMes from './first-mes.astro'
+import MessageExample from './message-example.astro'
+
 interface Props {
   character: string
   json: Card
@@ -19,15 +22,15 @@ const card = exportToJSON(json)
 
 <Tabs>
   {json.description && <TabItem label="Description"><Markdown of={json.description} /></TabItem>}
-  {card.data.first_mes && <TabItem label="First Message"><Markdown of={card.data.first_mes} /></TabItem>}
+  {card.data.first_mes && <TabItem label="First Message"><FirstMes {json} /></TabItem>}
   {card.data.alternate_greetings.length > 0 && <TabItem label="Alternate Greetings"><Markdown of={card.data.alternate_greetings.join('\n\n---\n\n')} /></TabItem>}
-  {json.messageExample && <TabItem label="Example Messages"><Markdown of={json.messageExample.map(arr => arr.join('\n\n')).join('\n\n---\n\n')} /></TabItem>}
+  {json.messageExample && <TabItem label="Example Messages"><MessageExample {json} /></TabItem>}
   {/* TODO: personality, character_book, system_prompt */}
 </Tabs>
 
 <Markdown.Inline of="## Raw" />
 
 <details>
-  <summary>{character}.json</summary>
+  <summary>{character}.json (length: {JSON.stringify(card).length})</summary>
   <Code code={JSON.stringify(card, null, 2)} lang="json" />
 </details>

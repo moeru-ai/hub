@@ -1,4 +1,5 @@
 import starlight from '@astrojs/starlight'
+import tailwind from '@astrojs/tailwind'
 import markdown from '@astropub/md'
 // @ts-check
 import { defineConfig } from 'astro/config'
@@ -33,6 +34,7 @@ export default defineConfig({
       },
       title: '@moeru-ai/hub',
     }),
+    tailwind(),
   ],
   markdown: { smartypants: false },
 })

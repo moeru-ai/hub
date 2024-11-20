@@ -1,0 +1,20 @@
+---
+import type { Card } from '@moeru-ai/ccc'
+
+interface Props {
+  json: Card
+}
+
+const { json } = Astro.props
+---
+
+{json.messageExample!.map(chats => 
+    chats.map(chat => {
+        const isChar = chat.startsWith('{{char}}: ')
+        const message = chat.slice(10)
+
+        return (<div class={`chat ${isChar ? 'chat-start' : 'chat-end'}`}>
+            <div class={`chat-bubble ${!isChar && 'chat-bubble-accent'}`}>{message}</div>
+        </div>)
+    })
+).reduce((prev, curr) => [prev, (<div class="divider"></div>), curr])}
