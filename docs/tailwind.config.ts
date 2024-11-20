@@ -9,6 +9,7 @@ const renameTheme = (theme: CustomTheme, name: string) => Object.fromEntries(Obj
 export default {
   /** @see {@link https://docs.astro.build/en/guides/integrations-guide/tailwind/#manual-install} */
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  corePlugins: { preflight: false },
   daisyui: {
     logs: false,
     themes: [
