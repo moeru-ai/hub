@@ -17,7 +17,10 @@ const { json } = Astro.props
 <StarlightPage frontmatter={{
   title: json.name,
   description: json.notes,
-  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-derivative/src/${category}/${character}/index.ts`
-}}>
+  editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-derivative/src/${category}/${character}/index.ts`,
+}} headings={[
+  { depth: 2, slug: 'definitions', text: 'Definitions' },
+  { depth: 2, slug: 'raw', text: 'Raw' }
+]}>
   <Chara {character} {json} />
 </StarlightPage>
