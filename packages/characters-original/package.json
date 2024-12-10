@@ -2,20 +2,10 @@
   "name": "@moeru-ai/characters-original",
   "type": "module",
   "private": true,
-  "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch"
-  },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
+    ".": "./src/index.ts",
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@moeru-ai/ccc": "workspace:^"
   }
