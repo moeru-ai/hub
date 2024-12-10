@@ -2,6 +2,7 @@ import type { StarlightSidebarTopicsDropdownUserConfig } from 'starlight-sidebar
 
 import * as derivative from '@moeru-ai/characters-derivative'
 import * as existing from '@moeru-ai/characters-existing'
+import * as original from '@moeru-ai/characters-original'
 
 const toPascalCase = (str: string) => str.split('_').map(str => str.at(0)?.toUpperCase() + str.slice(1)).join(' ')
 
@@ -13,6 +14,18 @@ export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
       'characters',
       'characters/contributing',
       // { label: 'Introduction', slug: 'characters' },
+      {
+        // collapsed: true,
+        items: Object.entries(original).map(([category, characters]) => ({
+        //   collapsed: false,
+          items: Object.entries(characters).map(([character, json]) => ({
+            label: json.name,
+            link: `characters/original/${category}/${character}`,
+          })),
+          label: toPascalCase(category),
+        })),
+        label: 'Original',
+      },
       {
         // collapsed: true,
         items: Object.entries(existing).map(([category, characters]) => ({

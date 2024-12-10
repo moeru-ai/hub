@@ -23,6 +23,7 @@
     "@moeru-ai/ccc": "workspace:^",
     "@moeru-ai/characters-derivative": "workspace:^",
     "@moeru-ai/characters-existing": "workspace:^",
+    "@moeru-ai/characters-original": "workspace:^",
     "daisyui": "^4.12.14",
     "starlight-sidebar-topics-dropdown": "^0.2.1",
     "starlight-theme-catppuccin": "^1.0.3",
