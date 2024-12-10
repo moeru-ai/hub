@@ -4,6 +4,9 @@
       "path": "./tsconfig.node.json"
     },
     {
+      "path": "./packages/ccc/tsconfig.json"
+    },
+    {
       "path": "./packages/character-card-helpers/tsconfig.json"
     },
     {
@@ -14,6 +17,9 @@
     },
     {
       "path": "./packages/characters-existing/tsconfig.json"
+    },
+    {
+      "path": "./packages/characters-original/tsconfig.json"
     }
   ],
   "files": []
