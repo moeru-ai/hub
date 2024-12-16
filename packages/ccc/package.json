@@ -2,8 +2,8 @@
   "name": "@moeru-ai/ccc",
   "type": "module",
   "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch",
+    "build": "pkgroll",
+    "build:watch": "pkgroll --watch",
     "test": "vitest run",
     "test:watch": "vitest"
   },

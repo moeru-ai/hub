@@ -16,7 +16,7 @@
     "@types/node": "^22.9.0",
     "eslint": "^9.15.0",
     "eslint-plugin-astro": "^1.3.1",
-    "tsup": "^8.3.5",
+    "pkgroll": "^2.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3",
     "vitest": "^2.1.5"
