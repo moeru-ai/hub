@@ -16,7 +16,7 @@ const { character, json } = Astro.props
 const card = exportToJSON(json)
 ---
 
-<Markdown.Inline of={`${json.notes ? `> ${json.notes}\n>\n` : ''}> <a href="data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}" download="${character}.json">Download JSON</a>`} />
+<Markdown.Inline of={`${json.notes ? `> ${json.notes.split('\n').join('\n> ')}\n>\n` : ''}> <a href="data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}" download="${character}.json">Download JSON</a>`} />
 
 <Markdown.Inline of="## Definitions" />
 
