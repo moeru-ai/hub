@@ -20,6 +20,8 @@ The following types are explicitly not welcome:
 
 - **Realistic or Non-female human characters**
   - This is not in line with the philosophy of Moeru-AI.
+- **VTuber**
+  - If it's an AI and not a human, there's no restriction.
 - **HoYoverse characters**
   - There are already plenty of them online, I don't think more are needed.
 
