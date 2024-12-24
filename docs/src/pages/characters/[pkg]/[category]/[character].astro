@@ -17,10 +17,10 @@ export const getStaticPaths = () => {
     })))
 
   return [
-  ...generateStaticPaths(derivative, 'derivative'),
-  ...generateStaticPaths(existing, 'existing'),
-  ...generateStaticPaths(original, 'original'),
-]
+    ...generateStaticPaths(derivative, 'derivative'),
+    ...generateStaticPaths(existing, 'existing'),
+    ...generateStaticPaths(original, 'original'),
+  ]
 }
 
 const { category, character, pkg } = Astro.params
