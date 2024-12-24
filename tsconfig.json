@@ -4,6 +4,9 @@
       "path": "./tsconfig.node.json"
     },
     {
+      "path": "./docs/tsconfig.json"
+    },
+    {
       "path": "./packages/ccc/tsconfig.json"
     },
     {
