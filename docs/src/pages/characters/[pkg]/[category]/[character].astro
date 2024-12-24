@@ -1,0 +1,44 @@
+---
+import type { Card } from '@moeru-ai/ccc'
+
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro'
+import * as derivative from '@moeru-ai/characters-derivative'
+import * as existing from '@moeru-ai/characters-existing'
+import * as original from '@moeru-ai/characters-original'
+
+import Chara from '../../../../components/chara.astro'
+
+export const getStaticPaths = () => {
+  const generateStaticPaths = (json: any, pkg: string) => Object.entries(json)
+    .flatMap(([category, characters]) => Object.entries(characters as any)
+    .flatMap(([character, json]) => ({
+        params: { category, character, pkg },
+        props: { json },
+    })))
+
+  return [
+  ...generateStaticPaths(derivative, 'derivative'),
+  ...generateStaticPaths(existing, 'existing'),
+  ...generateStaticPaths(original, 'original'),
+]
+}
+
+const { category, character, pkg } = Astro.params
+const { json } = Astro.props as { json: Card }
+---
+
+<StarlightPage
+  frontmatter={{
+    chara_version: json.version,
+    description: json.notes,
+    editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-${pkg}/src/${category}/${character}/index.ts`,
+    title: json.name,
+    type: 'character',
+  }}
+  headings={[
+    { depth: 2, slug: 'definitions', text: 'Definitions' },
+    { depth: 2, slug: 'raw', text: 'Raw' },
+  ]}
+>
+  <Chara {character} {json} />
+</StarlightPage>
