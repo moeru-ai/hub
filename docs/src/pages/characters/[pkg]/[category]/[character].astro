@@ -32,6 +32,31 @@ const { json } = Astro.props as { json: Card }
     chara_version: json.version,
     description: json.notes,
     editUrl: `https://github.com/moeru-ai/hub/edit/main/packages/characters-${pkg}/src/${category}/${character}/index.ts`,
+    head: [
+      {
+        attrs: {
+          // TODO: update
+          content: `https://ai.kwaa.moe/hub/characters/og/${pkg}/${category}/${character}.webp`,
+          property: 'og:image',
+        },
+        tag: 'meta',
+      },
+      {
+        attrs: {
+          // TODO: update
+          content: `https://ai.kwaa.moe/hub/characters/og/${pkg}/${category}/${character}.webp`,
+          name: 'twitter:image',
+        },
+        tag: 'meta',
+      },
+      {
+        attrs: {
+          content: 'summary_large_image',
+          name: 'twitter:card',
+        },
+        tag: 'meta',
+      },
+    ],
     title: json.name,
     type: 'character',
   }}
