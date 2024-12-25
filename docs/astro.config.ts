@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config'
 import sidebarTopicsDropdown from 'starlight-sidebar-topics-dropdown'
 import catppuccin from 'starlight-theme-catppuccin'
 
-import { generateSidebar } from './src/utils/sidebar'
+import { sidebar } from './src/utils/sidebar'
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +28,7 @@ export default defineConfig({
         src: './public/moeru-ai.png',
       },
       plugins: [
-        sidebarTopicsDropdown(generateSidebar()),
+        sidebarTopicsDropdown(sidebar),
         catppuccin({
           dark: 'macchiato-green',
           light: 'latte-teal',

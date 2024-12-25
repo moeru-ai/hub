@@ -6,7 +6,7 @@ import * as original from '@moeru-ai/characters-original'
 
 const toPascalCase = (str: string) => str.split('_').map(str => str.at(0)?.toUpperCase() + str.slice(1)).join(' ')
 
-export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
+const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
   {
     icon: 'open-book',
     // collapsed: false,
@@ -70,3 +70,5 @@ export const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
     link: 'packages',
   },
 ]
+
+export const sidebar = generateSidebar()
