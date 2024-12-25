@@ -18,6 +18,9 @@ export default defineConfig({
       components: {
         PageTitle: './src/components/starlight/PageTitle.astro',
       },
+      editLink: {
+        baseUrl: 'https://github.com/moeru-ai/hub/edit/main/docs',
+      },
       favicon: '/moeru-ai.png',
       logo: {
         alt: '@moeru-ai/hub',
