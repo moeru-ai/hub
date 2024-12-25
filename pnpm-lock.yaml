@@ -81,6 +81,9 @@ importers:
       astro-og-canvas:
         specifier: ^0.5.5
         version: 0.5.5(astro@4.16.13(@types/node@22.9.0)(less@4.2.0)(rollup@4.24.3)(typescript@5.6.3))
+      canvaskit-wasm:
+        specifier: ^0.39.1
+        version: 0.39.1
       daisyui:
         specifier: ^4.12.14
         version: 4.12.14(postcss@8.4.49)

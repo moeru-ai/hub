@@ -25,6 +25,7 @@
     "@moeru-ai/characters-existing": "workspace:^",
     "@moeru-ai/characters-original": "workspace:^",
     "astro-og-canvas": "^0.5.5",
+    "canvaskit-wasm": "^0.39.1",
     "daisyui": "^4.12.14",
     "starlight-sidebar-topics-dropdown": "^0.2.1",
     "starlight-theme-catppuccin": "^1.0.3",
