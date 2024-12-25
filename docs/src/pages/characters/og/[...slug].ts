@@ -26,34 +26,46 @@ const families = [
 
 export const { GET, getStaticPaths } = OGImageRoute({
   getImageOptions: (_path, page: Card) => ({
-    bgGradient: [[0, 0, 0], [67, 67, 67]],
-    // 076 Premium Dark from https://webgradients.com/
-    // TODO: bgImage
+    // 134 Glass Water from https://webgradients.com/
+    bgGradient: [[255, 255, 255], [223, 233, 243]],
     description: page.notes,
     font: {
       description: {
-        // 089 Premium White from https://webgradients.com/
-        color: [213, 212, 208],
+        // 076 Premium Dark from https://webgradients.com/
+        color: [67, 67, 67],
         families,
         size: 24,
-        weight: 'Normal',
       },
       title: {
+        color: [0, 0, 0],
         families,
+        lineHeight: 3, // if no logo
         weight: 'Bold',
       },
     },
     fonts: [
+      // astro docs assets
       'https://cdn.jsdelivr.net/gh/withastro/docs/src/pages/open-graph/_fonts/noto-sans/noto-500-normal.ttf',
       'https://cdn.jsdelivr.net/gh/withastro/docs/src/pages/open-graph/_fonts/noto-sans/chinese-simplified-500-normal.ttf',
       // 'https://cdn.jsdelivr.net/gh/withastro/docs/src/pages/open-graph/_fonts/noto-sans/chinese-traditional-500-normal.ttf',
       'https://cdn.jsdelivr.net/gh/withastro/docs/src/pages/open-graph/_fonts/noto-sans/japanese-500-normal.ttf',
+      // fontsource api
+      // 'https://api.fontsource.org/v1/fonts/noto-sans/latin-400-normal.ttf',
+      // 'https://api.fontsource.org/v1/fonts/noto-sans-sc/chinese-simplified-400-normal.ttf',
+      // 'https://api.fontsource.org/v1/fonts/noto-sans-tc/chinese-traditional-400-normal.ttf',
+      // 'https://api.fontsource.org/v1/fonts/noto-sans-jp/japanese-400-normal.ttf',
     ],
     format: 'WEBP',
-    logo: {
-      path: './public/moeru-ai.png',
-      size: [64, 64] as const,
-    },
+    // logo: {
+    //   path: './public/characters/existing/blue_archive/hatsune_miku.png',
+    //   size: [144],
+    // },
+    // bgImage: {
+    //   fit: 'none',
+    //   path: './public/moeru-ai.png',
+    //   position: ['start', 'end'],
+    // },
+    padding: 72,
     quality: 90,
     title: page.name,
   }),
