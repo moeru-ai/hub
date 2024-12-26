@@ -17,11 +17,11 @@ export default defineConfig({
         PageTitle: './src/components/starlight/PageTitle.astro',
       },
       editLink: {
-        baseUrl: 'https://github.com/moeru-ai/hub/edit/main/docs',
+        baseUrl: 'https://github.com/moeru-ai/deck/edit/main/docs',
       },
       favicon: '/moeru-ai.png',
       logo: {
-        alt: '@moeru-ai/hub',
+        alt: '@moeru-ai/deck',
         replacesTitle: true,
         src: './public/moeru-ai.png',
       },
@@ -34,9 +34,9 @@ export default defineConfig({
       ],
       // sidebar: generateSidebar(),
       social: {
-        github: 'https://github.com/moeru-ai/hub',
+        github: 'https://github.com/moeru-ai/deck',
       },
-      title: '@moeru-ai/hub',
+      title: '@moeru-ai/deck',
     }),
     tailwind(),
   ],

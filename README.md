@@ -1,4 +1,4 @@
-# @moeru-ai/hub
+# @moeru-ai/deck
 
 ## License
 

@@ -1,8 +1,8 @@
 {
-  "name": "@moeru-ai/hub",
+  "name": "@moeru-ai/deck-workspace",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.13.2",
+  "packageManager": "pnpm@9.15.1",
   "scripts": {
     "build": "corepack pnpm -r build",
     "docs:dev": "corepack pnpm -rF @moeru-ai/docs dev",

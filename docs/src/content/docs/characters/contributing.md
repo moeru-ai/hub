@@ -31,7 +31,7 @@ By contributing content to Moeru-AI, you agree that it complies with Moeru-AI's 
 
 When you're not sure if the character you want to make will be accepted by Moeru-AI
 (if it doesn't violate the Acceptable Content Guidelines above),
-feel free to [submit a new issue](https://github.com/moeru-ai/hub/issues/new).
+feel free to [submit a new issue](https://github.com/moeru-ai/deck/issues/new).
 
 ## Pull Requests
 
