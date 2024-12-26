@@ -10,8 +10,6 @@ import { sidebar } from './src/utils/sidebar'
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: remove this
-  base: '/hub/',
   integrations: [
     markdown(),
     starlight({
