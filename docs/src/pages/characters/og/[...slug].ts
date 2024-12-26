@@ -26,7 +26,7 @@ const families = [
 
 export const { GET, getStaticPaths } = OGImageRoute({
   getImageOptions: (_path, page: Card) => {
-    const { avatar } = page.metadata as { avatar?: string }
+    const { avatar } = (page.metadata ?? {}) as { avatar?: string }
 
     return {
       // 134 Glass Water from https://webgradients.com/
