@@ -1,16 +1,20 @@
 import { md } from '@moeru-ai/ccc'
 
-export const notes = md.p([
-  'The always-cheerful virtual singer who really loves to sing.',
-  '\nOriginally a purely electronic existence,',
-  'the technology of Kivotos has allowed Miku to obtain a real body and stand in the real world.',
-  '\nAs expected of a singer whose music can overcome time and space,',
-  'Miku has many secret fans in Kivotos who are eagerly looking forward to the live concert that she\'s planning to hold in this world.',
-])
+export const notes = [
+  md.p(['The always-cheerful virtual singer who really loves to sing.']),
+  md.p([
+    'Originally a purely electronic existence,',
+    'the technology of Kivotos has allowed Miku to obtain a real body and stand in the real world.',
+  ]),
+]
 
 const about = [
   md.h(3, 'About'),
-  notes,
+  ...notes,
+  md.p([
+    'As expected of a singer whose music can overcome time and space,',
+    'Miku has many secret fans in Kivotos who are eagerly looking forward to the live concert that she\'s planning to hold in this world.',
+  ]),
 ]
 
 const appearance = [

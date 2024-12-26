@@ -35,6 +35,6 @@ export const hatsune_miku = defineCard({
   },
   name: 'Miku Hatsune',
   nickname: 'Miku',
-  notes,
+  notes: notes.join('\n\n'),
   version: '0.1',
 })
