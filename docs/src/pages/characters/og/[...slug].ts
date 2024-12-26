@@ -28,6 +28,11 @@ export const { GET, getStaticPaths } = OGImageRoute({
   getImageOptions: (_path, page: Card) => ({
     // 134 Glass Water from https://webgradients.com/
     bgGradient: [[255, 255, 255], [223, 233, 243]],
+    bgImage: {
+      fit: 'fill',
+      path: './public/moeru-ai-og.png',
+      position: 'center',
+    },
     description: page.notes,
     font: {
       description: {
@@ -59,11 +64,6 @@ export const { GET, getStaticPaths } = OGImageRoute({
     // logo: {
     //   path: './public/characters/existing/blue_archive/hatsune_miku.png',
     //   size: [144],
-    // },
-    // bgImage: {
-    //   fit: 'none',
-    //   path: './public/moeru-ai.png',
-    //   position: ['start', 'end'],
     // },
     padding: 72,
     quality: 90,
