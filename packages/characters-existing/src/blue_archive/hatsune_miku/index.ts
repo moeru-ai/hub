@@ -1,6 +1,6 @@
 import { defineCard } from '@moeru-ai/ccc'
 
-import { description } from './description'
+import { description, notes } from './description'
 import {
   momotalk_1,
   momotalk_2,
@@ -35,6 +35,6 @@ export const hatsune_miku = defineCard({
   },
   name: 'Miku Hatsune',
   nickname: 'Miku',
-  notes: 'Hatsune Miku from "Blue Archive".',
+  notes,
   version: '0.1',
 })
