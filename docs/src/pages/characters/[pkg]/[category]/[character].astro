@@ -29,6 +29,7 @@ const { json } = Astro.props as { json: Card }
 
 <StarlightPage
   frontmatter={{
+    avatar: json.metadata?.avatar as string || undefined,
     chara_version: json.version,
     description: json.notes,
     editUrl: `https://github.com/moeru-ai/deck/edit/main/packages/characters-${pkg}/src/${category}/${character}/index.ts`,

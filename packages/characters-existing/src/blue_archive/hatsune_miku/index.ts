@@ -30,6 +30,9 @@ export const hatsune_miku = defineCard({
     momotalk_4,
     virtual_idol_stage,
   ],
+  metadata: {
+    avatar: '/characters/existing/blue_archive/hatsune_miku.png',
+  },
   name: 'Miku Hatsune',
   nickname: 'Miku',
   notes: 'Hatsune Miku from "Blue Archive".',

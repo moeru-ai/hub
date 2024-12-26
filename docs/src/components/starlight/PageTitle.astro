@@ -13,15 +13,18 @@ const { data } = Astro.props.entry;
 {
   data.type === 'character'
   ? (
-    <div class="wrapper">
-      <Default {...Astro.props}>
-        <slot />
-      </Default>
-      <div class="integration-metadata">
-        <Badge
-          text={`v${data.chara_version}`}
-          variant={data.chara_version?.startsWith('0.0') ? 'caution' : data.chara_version?.startsWith('0') ? 'tip' : 'success'}
-        />
+    <div class="flex items-center gap-6">
+      {data.avatar && <img class="w-20 rounded-xs" src={data.avatar} />}
+      <div class="wrapper pb-4">
+        <Default {...Astro.props}>
+          <slot />
+        </Default>
+        <div class="integration-metadata">
+          <Badge
+            text={`v${data.chara_version}`}
+            variant={data.chara_version?.startsWith('0.0') ? 'caution' : data.chara_version?.startsWith('0') ? 'tip' : 'success'}
+          />
+        </div>
       </div>
     </div>
   )

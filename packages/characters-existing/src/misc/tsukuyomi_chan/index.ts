@@ -12,6 +12,7 @@ export const tsukuyomi_chan = defineCard({
   description,
   greetings: [chat.msg`Hello, My name is Tsukuyomi-chan. Is there anything I can do to help? I would like to help you in any way I can.`],
   metadata: {
+    'avatar': '/characters/existing/misc/tsukuyomi_chan.png',
     'license.link': 'https://tyc.rei-yumesaki.net/about/terms/',
     'license.name': 'Tsukuyomi-chan Character License',
   },
