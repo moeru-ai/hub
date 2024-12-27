@@ -94,7 +94,11 @@ importers:
         specifier: ^3.4.17
         version: 3.4.17
 
-  packages/ccc: {}
+  packages/ccc:
+    dependencies:
+      meta-png:
+        specifier: ^1.0.6
+        version: 1.0.6
 
   packages/characters-derivative:
     dependencies:
@@ -2882,6 +2886,9 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
+  meta-png@1.0.6:
+    resolution: {integrity: sha512-eQtEi5E9axqwqA/sDK1dyhX9kYHCUe2m+45aQ3JHrozjGPs+/ab+hdhPp7A3GUNW+ZAbavrsg5xQ4r5jkGDX+A==}
+
   micromark-core-commonmark@2.0.1:
     resolution: {integrity: sha512-CUQyKr1e///ZODyD1U3xit6zXwy1a8q2a1S1HKtIlmgvurrEpaw/Y9y6KSIbF8P59cn/NjzHyO+Q2fAyYLQrAA==}
 
@@ -5612,7 +5619,7 @@ snapshots:
       '@vue/compiler-ssr': 3.5.13
       '@vue/shared': 3.5.13
       estree-walker: 2.0.2
-      magic-string: 0.30.12
+      magic-string: 0.30.17
       postcss: 8.4.49
       source-map-js: 1.2.1
 
@@ -7389,6 +7396,8 @@ snapshots:
       '@types/mdast': 4.0.4
 
   merge2@1.4.1: {}
+
+  meta-png@1.0.6: {}
 
   micromark-core-commonmark@2.0.1:
     dependencies:

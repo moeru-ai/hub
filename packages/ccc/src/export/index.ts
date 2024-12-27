@@ -1,5 +1,5 @@
-export { exportToAPNG, exportToAPNG as exportToApng } from './apng'
-export { exportToJSON, exportToJSON as exportToJson } from './json'
+export { exportToAPNG } from './apng'
+export { exportToJSON } from './json'
 export { exportToMD, exportToMD as exportToMarkdown } from './md'
-export { exportToPNG, exportToPNG as exportToPng } from './png'
+export { exportToPNG, exportToPNGBase64 } from './png'
 export type * as ccv3 from './types'
