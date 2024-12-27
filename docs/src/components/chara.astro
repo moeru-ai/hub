@@ -1,7 +1,8 @@
 ---
-import { Code, TabItem, Tabs } from '@astrojs/starlight/components'
+import { Code, LinkButton, TabItem, Tabs } from '@astrojs/starlight/components'
 import { Markdown } from '@astropub/md'
-import { type Card, exportToJSON } from '@moeru-ai/ccc'
+import { type Card, exportToJSON, exportToPNGBase64 } from '@moeru-ai/ccc'
+import { readFile } from 'node:fs/promises'
 
 import FirstMes from './first-mes.astro'
 import MessageExample from './message-example.astro'
@@ -14,9 +15,32 @@ interface Props {
 const { character, json } = Astro.props
 
 const card = exportToJSON(json)
+
+const png = json.metadata?.avatar
+  // eslint-disable-next-line antfu/no-top-level-await
+  ? await readFile(`./public${json.metadata.avatar}`, { encoding: 'base64' })
+  : undefined
 ---
 
-<Markdown.Inline of={`${json.notes ? `> ${json.notes.split('\n').join('\n> ')}\n>\n` : ''}> <a href="data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}" download="${character}.json">Download JSON</a>`} />
+<Markdown.Inline of={json.notes ? `> ${json.notes.split('\n').join('\n> ')}` : ''} />
+
+<Markdown.Inline of="## Downloads" />
+
+{png && (
+<LinkButton
+  download={`${character}.png`}
+  href={`${exportToPNGBase64(json, `data:image/png;base64,${png}`)}`}
+>
+  PNG
+</LinkButton>
+)}
+<LinkButton
+  download={`${character}.json`}
+  href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}`}
+  variant={png ? 'secondary' : 'primary'}
+>
+  JSON
+</LinkButton>
 
 <Markdown.Inline of="## Definitions" />
 
