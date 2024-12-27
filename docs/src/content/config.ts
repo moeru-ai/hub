@@ -7,7 +7,9 @@ export const collections = {
       extend: z.object({
         // character avatar
         avatar: z.string().optional(),
+        // character version
         chara_version: z.string().optional(),
+        // page type
         type: z.string().optional(),
       }),
     }),
