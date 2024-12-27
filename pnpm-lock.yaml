@@ -95,7 +95,7 @@ importers:
         version: 3.4.17
 
   packages/ccc:
-    dependencies:
+    devDependencies:
       meta-png:
         specifier: ^1.0.6
         version: 1.0.6
