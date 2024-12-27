@@ -58,6 +58,7 @@ const generateSidebar = (): StarlightSidebarTopicsDropdownUserConfig => [
     icon: 'document',
     // id: 'packages',
     items: [
+      'packages',
       {
         items: [{
           label: 'Readme',
