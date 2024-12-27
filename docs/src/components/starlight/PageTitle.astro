@@ -14,7 +14,7 @@ const { data } = Astro.props.entry;
   data.type === 'character'
   ? (
     <div class="flex items-center gap-6">
-      {data.avatar && <img class="w-20 rounded-xs" src={data.avatar} />}
+      {data.avatar && <img class="w-20 rounded-xs" id="character-avatar" src={data.avatar} />}
       <div class="wrapper pb-4">
         <Default {...Astro.props}>
           <slot />

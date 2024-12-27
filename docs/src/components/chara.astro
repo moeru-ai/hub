@@ -1,8 +1,7 @@
 ---
-import { Code, LinkButton, TabItem, Tabs } from '@astrojs/starlight/components'
+import { Code, TabItem, Tabs } from '@astrojs/starlight/components'
 import { Markdown } from '@astropub/md'
-import { type Card, exportToJSON, exportToPNGBase64 } from '@moeru-ai/ccc'
-import { readFile } from 'node:fs/promises'
+import { type Card, exportToJSON } from '@moeru-ai/ccc'
 
 import FirstMes from './first-mes.astro'
 import MessageExample from './message-example.astro'
@@ -15,32 +14,58 @@ interface Props {
 const { character, json } = Astro.props
 
 const card = exportToJSON(json)
-
-const png = json.metadata?.avatar
-  // eslint-disable-next-line antfu/no-top-level-await
-  ? await readFile(`./public${json.metadata.avatar}`, { encoding: 'base64' })
-  : undefined
 ---
+
+<p class="hidden" data-name={character} id="character-card-raw">{JSON.stringify(json)}</p>
 
 <Markdown.Inline of={json.notes ? `> ${json.notes.split('\n').join('\n> ')}` : ''} />
 
 <Markdown.Inline of="## Downloads" />
 
-{png && (
-<LinkButton
-  download={`${character}.png`}
-  href={`${exportToPNGBase64(json, `data:image/png;base64,${png}`)}`}
->
-  PNG
-</LinkButton>
-)}
-<LinkButton
-  download={`${character}.json`}
-  href={`data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(card))}`}
-  variant={png ? 'secondary' : 'primary'}
->
-  JSON
-</LinkButton>
+<script>
+import { exportToJSON, exportToPNGBase64 } from '@moeru-ai/ccc'
+
+const cardRAW = document.getElementById('character-card-raw')!
+const card = cardRAW.textContent!
+const character = cardRAW.getAttribute('data-name')
+
+const buttonJSON = document.getElementById('download-json')!
+const buttonPNG = document.getElementById('download-png')
+
+buttonJSON.addEventListener('click', () => {
+  const a = document.createElement('a')
+  a.href = `data:text/json;charset=utf-8,${encodeURIComponent(JSON.stringify(exportToJSON(JSON.parse(card))))}`
+  a.download = `${character}.json`
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+})
+
+if (buttonPNG) {
+  const img = document.getElementById('character-avatar')! as HTMLImageElement
+
+  const canvas = document.createElement('canvas')
+  canvas.width = img.naturalWidth
+  canvas.height = img.naturalHeight
+
+  const ctx = canvas.getContext('2d')!
+  ctx.drawImage(img, 0, 0)
+
+  buttonPNG.addEventListener('click', () => {
+    const a = document.createElement('a')
+    a.href = exportToPNGBase64(JSON.parse(card), canvas.toDataURL('image/png'))
+    a.download = `${character}.png`
+    document.body.appendChild(a)
+    a.click()
+    document.body.removeChild(a)
+  })
+}
+</script>
+
+<div class="join">
+  {json.metadata?.avatar && <button class="btn btn-accent join-item border-none" id="download-png">PNG</button>}
+  <button class="btn btn-accent join-item border-none !mt-0" id="download-json">JSON</button>
+</div>
 
 <Markdown.Inline of="## Definitions" />
 
