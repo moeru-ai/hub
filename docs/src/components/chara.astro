@@ -29,8 +29,8 @@ const cardRAW = document.getElementById('character-card-raw')!
 const card = cardRAW.textContent!
 const character = cardRAW.getAttribute('data-name')
 
-const buttonJSON = document.getElementById('download-json')!
-const buttonPNG = document.getElementById('download-png')
+const buttonJSON = document.getElementById('download-json')! as HTMLButtonElement
+const buttonPNG = document.getElementById('download-png') as HTMLButtonElement | null
 
 buttonJSON.addEventListener('click', () => {
   const a = document.createElement('a')
@@ -40,6 +40,7 @@ buttonJSON.addEventListener('click', () => {
   a.click()
   document.body.removeChild(a)
 })
+buttonJSON.disabled = false
 
 if (buttonPNG) {
   const img = document.getElementById('character-avatar')! as HTMLImageElement
@@ -59,12 +60,13 @@ if (buttonPNG) {
     a.click()
     document.body.removeChild(a)
   })
+  buttonPNG.disabled = false
 }
 </script>
 
 <div class="join">
-  {json.metadata?.avatar && <button class="btn btn-accent join-item border-none" id="download-png">PNG</button>}
-  <button class="btn btn-accent join-item border-none !mt-0" id="download-json">JSON</button>
+  {json.metadata?.avatar && <button class="btn btn-accent join-item border-none" disabled id="download-png">PNG</button>}
+  <button class="btn btn-accent join-item border-none !mt-0" disabled id="download-json">JSON</button>
 </div>
 
 <Markdown.Inline of="## Definitions" />
