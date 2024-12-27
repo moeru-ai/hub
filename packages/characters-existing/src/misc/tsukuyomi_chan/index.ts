@@ -23,6 +23,7 @@ export const tsukuyomi_chan = defineCard({
     'These are unofficial character card of "つくよみちゃん" (Tsukuyomi-chan), the Free Material Character from Japan.',
     'Based on "Tsukuyomi-chan Character License".',
     'Tsukuyomi-chan Official Site: https://tyc.rei-yumesaki.net/',
+    'Illust: Rei Yumesaki',
   ].join('\n\n'),
   version: '0.0',
 })
